@@ -1,0 +1,2928 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Property Sell | House Rent</title>
+
+    <!-- Custome Css  -->
+    <link href="./src/style.css" rel="stylesheet" />
+
+    <!-- For Logo upload and preview  -->
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js"
+      defer
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpine-collective/alpine-magic-helpers@0.3.x/dist/index.js"></script>
+
+    <!-- For Date Range Peeker  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+    />
+
+    <!-- Google Icon  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+  </head>
+
+  <body
+    class="globalMargin darkBackground bg-gradient-to-tr from-[#00ffbb62] via-green-300 to-[#fff] dark:from-slate-900 dark:to-green-900 scrollbar-hide"
+  >
+    <!-- Main Container  -->
+    <div class="flex justify-between w-full">
+      <!-- Aside Section  -->
+      <aside id="asdideBar"></aside>
+      <script src="./js/asideBar.js"></script>
+      <script>
+        document.getElementById("propertySell").classList.add("hover");
+      </script>
+      <!-- Right or maain section  -->
+      <section class="relative w-full lg:w-[80%]">
+        <!-- Nav bar section  -->
+        <nav
+          class="navBar fixed z-10 top-0 m-4 lg:m-8 p-2 flex justify-between customeBackground w-full"
+        >
+          <div>
+            <p class="font-semibold text-lg">
+              House <span class="text-green-600">Rent</span>
+            </p>
+          </div>
+
+          <!-- drawer init and show -->
+          <div class="flex space-x-1">
+            <div class="text-center lg:hidden">
+              <ion-icon
+                name="menu-outline"
+                id="asideButton"
+                class="text-2xl cursor-pointer hover:text-green-400 duration-200 active:text-gray-400 focus:text-green-400"
+              ></ion-icon>
+            </div>
+
+            <div class="text-center">
+              <a
+                href="./singIn.html"
+                class="tooltip text-[#213547] dark:text-gray-100 active:text-gray-400"
+                data-tip="Sing In"
+              >
+                <ion-icon
+                  name="person-circle-sharp"
+                  class="text-2xl cursor-pointer hover:text-green-400 duration-200 active:text-gray-400"
+                ></ion-icon>
+              </a>
+            </div>
+
+            <div
+              class="text-center tooltip"
+              data-tip="Notification"
+              id="notificatinButton"
+            >
+              <ion-icon
+                name="notifications-sharp"
+                class="text-2xl cursor-pointer hover:text-green-400 duration-200 active:text-gray-400"
+              ></ion-icon>
+            </div>
+          </div>
+        </nav>
+
+        <!-- DashBbord Section  -->
+        <div class="m-8 mt-28 relative">
+          <!-- tab buttons  -->
+          <div class="tabs">
+            <a
+              class="tab tab-lifted tabButton border-none duration-200 tab-active"
+              data-target="jobs"
+              >Sell Post</a
+            >
+            <a
+              class="tab tab-lifted tabButton border-none duration-200"
+              data-target="categories"
+              >Categories</a
+            >
+          </div>
+
+          <!-- Jobs Section  -->
+          <div class="jobsSection tabSection tab-section-active" id="jobs">
+            <div
+              class="overViewCardSection flex flex-wrap justify-between items-center space-y-8 md:space-y-4 xl:space-x-1 m-4 my-7"
+            >
+              <div
+                class="cardOne relative cardBackground bg-white dark:bg-slate-700 w-full md:w-[48%] xl:w-[24%] min-h-[6rem] mt-4"
+              >
+                <ion-icon
+                  name="bag-outline"
+                  class="absolute -top-4 h-8 w-8 hadow-md p-4 backdrop-blur-md shadow-lg shadow-green-300 rounded-lg bg-gradient-to-tr from-green-500 to-green-400 text-white text-sm md hydrated"
+                  role="img"
+                  aria-label="bag outline"
+                ></ion-icon>
+                <div class="topSection">
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="text-sm">
+                      Total <span class="text-green-400">Post</span>
+                    </p>
+                    <p class="font-semibold text-xl">1.8k</p>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div>
+                  <span
+                    ><span class="text-green-500">+55%</span> than last
+                    week</span
+                  >
+                </div>
+              </div>
+              <div
+                class="cardOne relative cardBackground bg-white dark:bg-slate-700 w-full md:w-[48%] xl:w-[24%] min-h-[6rem]"
+              >
+                <ion-icon
+                  name="ban-outline"
+                  class="absolute -top-4 h-8 w-8 hadow-md p-4 backdrop-blur-md shadow-lg shadow-red-300 rounded-lg bg-gradient-to-tr from-red-500 to-red-400 text-white text-sm md hydrated"
+                  role="img"
+                  aria-label="people outline"
+                ></ion-icon>
+                <div class="topSection">
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="text-sm">
+                      Inactive <span class="text-green-400">Post</span>
+                    </p>
+                    <p class="font-semibold text-xl">1.5k</p>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div>
+                  <span
+                    ><span class="text-green-500">+55%</span> than last
+                    week</span
+                  >
+                </div>
+              </div>
+              <div
+                class="cardOne relative cardBackground bg-white dark:bg-slate-700 w-full md:w-[48%] xl:w-[24%] min-h-[6rem]"
+              >
+                <ion-icon
+                  name="checkmark-done-circle-outline"
+                  class="absolute -top-4 h-8 w-8 hadow-md p-4 backdrop-blur-md shadow-lg shadow-blue-400 rounded-lg bg-gradient-to-tr from-blue-600 to-blue-500 text-white text-sm md hydrated"
+                  role="img"
+                  aria-label="checkmark-done-circle-outline"
+                ></ion-icon>
+                <div class="topSection">
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="text-sm">
+                      Active <span class="text-green-400">Post</span>
+                    </p>
+                    <p class="font-semibold text-xl">1.1k</p>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div>
+                  <span
+                    ><span class="text-green-500">+55%</span> than last
+                    week</span
+                  >
+                </div>
+              </div>
+              <div
+                class="cardOne relative cardBackground bg-white dark:bg-slate-700 w-full md:w-[48%] xl:w-[24%] min-h-[6rem]"
+              >
+                <ion-icon
+                  name="earth-outline"
+                  class="absolute -top-4 h-8 w-8 hadow-md p-4 backdrop-blur-md shadow-lg shadow-purple-400 rounded-lg bg-gradient-to-tr from-purple-600 to-purple-500 text-white text-sm md hydrated"
+                  role="img"
+                  aria-label="earth outline"
+                ></ion-icon>
+                <div class="topSection">
+                  <div class="flex flex-col justify-end items-end">
+                    <p class="text-sm">
+                      Total <span class="text-green-400"> Visit</span>
+                    </p>
+                    <p class="font-semibold text-xl">0.9k</p>
+                  </div>
+                </div>
+                <hr class="my-3" />
+                <div>
+                  <span
+                    ><span class="text-green-500">+55%</span> than last
+                    week</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="relative overflow-x-auto shadow-md sm:rounded-lg scrollbar-hide m-4"
+            >
+              <div class="flex items-center justify-between pb-4">
+                <div class="flex justify-center items-center m-2">
+                  <label
+                    for="my-modal-6"
+                    class="btn text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 border-none"
+                    >Add Sell Post</label
+                  >
+                  <button
+                    id="dropdownRadioButton"
+                    data-dropdown-toggle="dropdownRadio"
+                    class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 w-48 mr-2"
+                    type="button"
+                  >
+                    <svg
+                      class="w-4 h-4 mr-2 text-gray-400"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    Last 30 days
+                    <svg
+                      class="w-3 h-3 ml-2"
+                      aria-hidden="true"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 9l-7 7-7-7"
+                      ></path>
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdownRadio"
+                    class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
+                    data-popper-reference-hidden=""
+                    data-popper-escaped=""
+                    data-popper-placement="top"
+                    style="
+                      position: absolute;
+                      inset: auto auto 0px 0px;
+                      margin: 0px;
+                      transform: translate3d(522.5px, 3847.5px, 0px);
+                    "
+                  >
+                    <ul
+                      class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownRadioButton"
+                    >
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-1"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-1"
+                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
+                            >Last day</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            checked=""
+                            id="filter-radio-example-2"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-2"
+                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
+                            >Last 7 days</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-3"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-3"
+                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
+                            >Last 30 days</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-4"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-4"
+                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
+                            >Last month</label
+                          >
+                        </div>
+                      </li>
+                      <li>
+                        <div
+                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
+                        >
+                          <input
+                            id="filter-radio-example-5"
+                            type="radio"
+                            value=""
+                            name="filter-radio"
+                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                          />
+                          <label
+                            for="filter-radio-example-5"
+                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
+                            >Last year</label
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <label for="table-search" class="sr-only">Search</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="table-search"
+                    class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                    placeholder="Search for items"
+                  />
+                </div>
+              </div>
+              <table
+                class="w-full text-sm text-left text-gray-500 dark:text-gray-400"
+              >
+                <thead
+                  class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400"
+                >
+                  <tr>
+                    <th scope="col" class="p-4">Photo</th>
+                    <th scope="col" class="px-6 py-3">Title</th>
+                    <th scope="col" class="px-6 py-3">Property FOr</th>
+                    <th scope="col" class="px-6 py-3">Aavailable From</th>
+                    <th scope="col" class="px-6 py-3">Views</th>
+                    <th scope="col" class="px-6 py-3">Action</th>
+                  </tr>
+                </thead>
+                <tbody class="tableBody">
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="w-4 p-2">
+                      <div class="relative">
+                        <img
+                          class="w-10 h-10 rounded-full"
+                          src="https://foodshahibd.com/foodshahi_ci/assets/media/restaurants/logo/1552416111_logo.png"
+                          alt=""
+                        />
+                        <span
+                          data-tip="Active"
+                          class="tooltip top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"
+                        ></span>
+                      </div>
+                    </td>
+                    <th
+                      scope="row"
+                      data-tip="Post Date: 02 Sep, 2022 | View: 0.9k"
+                      class="px-6 py-4 tooltip font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Family Apartment Seven
+                    </th>
+                    <td class="px-6 py-4">Sell</td>
+                    <td class="px-6 py-4">02/09/21</td>
+                    <td class="px-6 py-4">4.5k</td>
+                    <td class="px-6 py-4">
+                      <label
+                        for="my-modal-edit"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 tooltip"
+                        data-tip="Edit"
+                        ><ion-icon
+                          class="text-xl text-green-600 toolCreate md hydrated"
+                          name="create-outline"
+                          role="img"
+                          aria-label="create outline"
+                        ></ion-icon>
+                      </label>
+                      <label
+                        for="my-modal-view"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 hover:underline"
+                      >
+                        <ion-icon
+                          class="text-xl text-green-600 md hydrated"
+                          name="eye-outline"
+                          role="img"
+                          aria-label="eye outline"
+                        ></ion-icon>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="w-4 p-2">
+                      <div class="relative">
+                        <img
+                          class="w-10 h-10 rounded-full"
+                          src="https://foodshahibd.com/foodshahi_ci/assets/media/restaurants/logo/1552416111_logo.png"
+                          alt=""
+                        />
+                        <span
+                          data-tip="Active"
+                          class="tooltip top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"
+                        ></span>
+                      </div>
+                    </td>
+                    <th
+                      scope="row"
+                      data-tip="Post Date: 02 Sep, 2022 | View: 0.9k"
+                      class="px-6 py-4 tooltip font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Family Apartment Seven
+                    </th>
+                    <td class="px-6 py-4">Sell</td>
+                    <td class="px-6 py-4">02/09/21</td>
+                    <td class="px-6 py-4">4.5k</td>
+                    <td class="px-6 py-4">
+                      <label
+                        for="my-modal-edit"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 tooltip"
+                        data-tip="Edit"
+                        ><ion-icon
+                          class="text-xl text-green-600 toolCreate md hydrated"
+                          name="create-outline"
+                          role="img"
+                          aria-label="create outline"
+                        ></ion-icon>
+                      </label>
+                      <label
+                        for="my-modal-view"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 hover:underline"
+                      >
+                        <ion-icon
+                          class="text-xl text-green-600 md hydrated"
+                          name="eye-outline"
+                          role="img"
+                          aria-label="eye outline"
+                        ></ion-icon>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="w-4 p-2">
+                      <div class="relative">
+                        <img
+                          class="w-10 h-10 rounded-full"
+                          src="https://foodshahibd.com/foodshahi_ci/assets/media/restaurants/logo/1552416111_logo.png"
+                          alt=""
+                        />
+                        <span
+                          data-tip="Active"
+                          class="tooltip top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"
+                        ></span>
+                      </div>
+                    </td>
+                    <th
+                      scope="row"
+                      data-tip="Post Date: 02 Sep, 2022 | View: 0.9k"
+                      class="px-6 py-4 tooltip font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Family Apartment Seven
+                    </th>
+                    <td class="px-6 py-4">Sell</td>
+                    <td class="px-6 py-4">02/09/21</td>
+                    <td class="px-6 py-4">4.5k</td>
+                    <td class="px-6 py-4">
+                      <label
+                        for="my-modal-edit"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 tooltip"
+                        data-tip="Edit"
+                        ><ion-icon
+                          class="text-xl text-green-600 toolCreate md hydrated"
+                          name="create-outline"
+                          role="img"
+                          aria-label="create outline"
+                        ></ion-icon>
+                      </label>
+                      <label
+                        for="my-modal-view"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 hover:underline"
+                      >
+                        <ion-icon
+                          class="text-xl text-green-600 md hydrated"
+                          name="eye-outline"
+                          role="img"
+                          aria-label="eye outline"
+                        ></ion-icon>
+                      </label>
+                    </td>
+                  </tr>
+                  <tr
+                    class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+                  >
+                    <td class="w-4 p-2">
+                      <div class="relative">
+                        <img
+                          class="w-10 h-10 rounded-full"
+                          src="https://foodshahibd.com/foodshahi_ci/assets/media/restaurants/logo/1552416111_logo.png"
+                          alt=""
+                        />
+                        <span
+                          data-tip="Active"
+                          class="tooltip top-0 left-7 absolute w-3.5 h-3.5 bg-green-400 border-2 border-white dark:border-gray-800 rounded-full"
+                        ></span>
+                      </div>
+                    </td>
+                    <th
+                      scope="row"
+                      data-tip="Post Date: 02 Sep, 2022 | View: 0.9k"
+                      class="px-6 py-4 tooltip font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                    >
+                      Family Apartment Seven
+                    </th>
+                    <td class="px-6 py-4">Sell</td>
+                    <td class="px-6 py-4">02/09/21</td>
+                    <td class="px-6 py-4">4.5k</td>
+                    <td class="px-6 py-4">
+                      <label
+                        for="my-modal-edit"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 tooltip"
+                        data-tip="Edit"
+                        ><ion-icon
+                          class="text-xl text-green-600 toolCreate md hydrated"
+                          name="create-outline"
+                          role="img"
+                          aria-label="create outline"
+                        ></ion-icon>
+                      </label>
+                      <label
+                        for="my-modal-view"
+                        href="#"
+                        class="cursor-pointer font-medium text-green-600 dark:text-green-500 hover:underline"
+                      >
+                        <ion-icon
+                          class="text-xl text-green-600 md hydrated"
+                          name="eye-outline"
+                          role="img"
+                          aria-label="eye outline"
+                        ></ion-icon>
+                      </label>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div
+              aria-label="Page navigation example "
+              class="flex justify-end items-center mr-4 mb-4"
+            >
+              <ul class="inline-flex items-center -space-x-px">
+                <li>
+                  <a
+                    href="#"
+                    class="block px-3 py-2 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    <span class="sr-only">Previous</span>
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >2</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    aria-current="page"
+                    class="z-10 px-3 py-2 leading-tight text-blue-600 border border-blue-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white"
+                    >3</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >4</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                    >5</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="block px-3 py-2 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                  >
+                    <span class="sr-only">Next</span>
+                    <svg
+                      aria-hidden="true"
+                      class="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Categories Section  -->
+          <div class="categoriesSection tabSection rounded-md" id="categories">
+            <div
+              class="relative overflow-x-auto shadow-md sm:rounded-lg scrollbar-hide m-4"
+            >
+              <!-- Top Section "Add Button", "Search Input" -->
+              <div class="flex items-center justify-between pb-4">
+                <div class="flex justify-center items-center m-2">
+                  <label
+                    for="addCategories"
+                    class="btn text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 border-none"
+                    >Add Categories</label
+                  >
+                </div>
+                <label for="table-search" class="sr-only">Search</label>
+                <div class="relative">
+                  <div
+                    class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+                  >
+                    <svg
+                      class="w-5 h-5 text-gray-500 dark:text-gray-400"
+                      aria-hidden="true"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    type="text"
+                    id="table-search"
+                    class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-green-500 focus:border-green-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                    placeholder="Search for items"
+                  />
+                </div>
+              </div>
+
+              <!-- Card Section  -->
+              <div
+                class="cardSection flex flex-wrap justify-center items-center"
+                id="categoryCardBody"
+              >
+                <div
+                  class="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative m-2 cardsAll"
+                >
+                  <!-- Acive/Inactive BAGED -->
+                  <div class="absolute top-3 left-3">
+                    <p
+                      class="cardStatusActive rounded-full bg-green-500 px-2 py-1 text-center text-xs hidden activeCard"
+                    >
+                      Active
+                    </p>
+                    <p
+                      class="cardStatusInactive rounded-full bg-red-500 px-2 py-1 text-center text-xs hidden"
+                    >
+                      Inactive
+                    </p>
+                  </div>
+
+                  <!-- Delete Edit Buttons -->
+                  <div class="absolute top-3 right-3">
+                    <label
+                      for="editCategories"
+                      class="editButton btn btn-success rounded-full w-12 focus:outline-none border-none bg-green-500 px-2 py-1 text-center text-xs"
+                    >
+                      <ion-icon
+                        class="text-[18px] text-white font-semibold"
+                        name="create-outline"
+                      ></ion-icon>
+                    </label>
+                    <label
+                      class="deleteButton btn btn-error rounded-full w-12 focus:outline-none border-none bg-red-500 px-2 py-1 text-center text-xs"
+                    >
+                      <ion-icon
+                        class="text-[18px] text-white font-semibold"
+                        name="trash-outline"
+                      ></ion-icon>
+                    </label>
+                  </div>
+
+                  <div class="flex justify-end px-4 pt-4"></div>
+                  <div class="flex flex-col items-center pb-10">
+                    <ion-icon
+                      name="bag-handle-outline"
+                      class="w-24 h-24 mb-3 rounded-md dark:ring-gray-400 shadow-lg"
+                    ></ion-icon>
+                    <h5
+                      class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
+                    >
+                      Temporary
+                    </h5>
+                    <span class="text-xs text-gray-500 dark:text-gray-400"
+                      >Total Job (198)</span
+                    >
+                    <div class="flex mt-4 space-x-3 md:mt-6">
+                      <a
+                        href="#"
+                        class="activeButton inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-green-700 rounded-lg hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                        >Active</a
+                      >
+                      <a
+                        href="#"
+                        class="inactiveButton inline-flex items-center px-4 py-2 text-sm font-medium text-center bg-red-600 border border-red-300 rounded-lg focus:ring-4 focus:outline-none focus:ring-red-200 text-white dark:border-red-600 hover:bg-red-800 dark:hover:border-red-700 dark:focus:ring-red-500"
+                        >Inactive</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Job Add Modal  -->
+    <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+      <div
+        class="alert alert-error shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden errAlartSection"
+      >
+        <div>
+          <span>Sorry! Please fill in all the form inputs.</span>
+        </div>
+      </div>
+      <div
+        class="alert alert-success shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden successAlartSection"
+      >
+        <div>
+          <span>Congratulations! Successfully added to post.</span>
+        </div>
+      </div>
+      <div
+        class="modal-box h-full flex flex-col justify-between scrollbar-hide lg:max-w-[100vw]"
+      >
+        <div>
+          <h3 class="font-bold text-lg mb-4">Add New Property Sell Post!</h3>
+          <label
+            for="my-modal-6"
+            class="material-symbols-outlined cancelBTN text-4xl fixed z-50 right-3 top-3 cursor-pointer hover:text-red-500 duration-300"
+            >cancel</label
+          >
+          <div>
+            <div class="flex justify-between space-x-1">
+              <form action="form" id="formID" class="space-y-4 w-full">
+                <div class="filtering flex align-middle space-x-10">
+                  <div
+                    class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="checkBoxes"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Property For</label
+                    >
+                    <div
+                      class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                    >
+                      <div class="rent">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="rentCheckBox checkbox checkbox-xs"
+                        />
+                        <label for="rent" class="text-sm">Rent</label>
+                      </div>
+                      <div class="sell">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="sellCheckBox checkbox checkbox-xs"
+                        />
+                        <label for="sell" class="text-sm">Sell</label>
+                      </div>
+                      <div class="both">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                        />
+                        <label for="both" class="text-sm">Both</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="view"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Property For</label
+                    >
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <div class="rent">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                          value="detail-view"
+                        />
+                        <label for="rent" class="text-sm">Detail View</label>
+                      </div>
+                      <div class="sell">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                          value="short-view"
+                        />
+                        <label for="sell" class="text-sm">Short View</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Title Area</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="postTitle inputCardTitleArea">
+                    <label
+                      for="postTitle"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Post Title</label
+                    >
+                    <input
+                      type="text"
+                      id="postTitle"
+                      name="postTitle"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: Family Apartment Seven"
+                      required
+                    />
+                  </div>
+
+                  <div class="skillsRequired inputCardTitleArea">
+                    <label
+                      for="skillsRequired"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Post Short Description</label
+                    >
+                    <textarea
+                      type="text"
+                      id="skillsRequired"
+                      rows="3"
+                      name="skillsRequired"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500 scrollbar-hide"
+                      placeholder="Put short description here.."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Price Details</h2>
+                <div class="priceDetail flex space-x-10">
+                  <div class="rent-month inputCardForPriceDetails">
+                    <label
+                      for="rent-month"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Rent/Month</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 550 (negotiable)"
+                      required
+                    />
+
+                    <label
+                      for="rent-month"
+                      class="block my-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Negotiable</label
+                    >
+                    <div class="flex space-x-4">
+                      <div class="yes flex space-x-3 items-center">
+                        <label
+                          for="rent-month"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >Yes</label
+                        >
+                        <input
+                          type="radio"
+                          name="radio-1"
+                          class="radio w-4 h-4"
+                          checked
+                        />
+                      </div>
+                      <div class="no flex space-x-3 items-center">
+                        <label
+                          for="rent-month"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >No</label
+                        >
+                        <input
+                          type="radio"
+                          name="radio-1"
+                          class="radio w-4 h-4"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="serviceCharge inputCardForPriceDetails">
+                    <label
+                      for="serviceCharge"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Service Charge</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="000.00 Tk per month, subject to change"
+                      required
+                    />
+                  </div>
+
+                  <div class="securityDeposit inputCardForPriceDetails">
+                    <label
+                      for="securityDeposit"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Security Deposit</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 month’s rent"
+                      required
+                    />
+                  </div>
+
+                  <div class="flatReleasePolicy inputCardForPriceDetails">
+                    <label
+                      for="flatReleasePolicy"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Release Policy</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 months earlier notice required"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Property Details</h2>
+                <div class="propertyDetails flex flex-wrap justify-between">
+                  <div class="addressAndArea inputCardForPropertyDetails">
+                    <label
+                      for="addressAndArea"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Address & Area</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your address here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="flatSize inputCardForPropertyDetails">
+                    <label
+                      for="flatSize"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Size</label
+                    >
+                    <input
+                      type="text"
+                      id="flatSize"
+                      name="flatSize"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 3000 Sq Feet."
+                      required
+                    />
+                  </div>
+
+                  <div class="floor inputCardForPropertyDetails">
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your floor here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="roomCategory inputCardForPropertyDetails">
+                    <label
+                      for="roomCategory"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Room Category</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your room category here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="facilities inputCardForPropertyDetails">
+                    <label
+                      for="facilities"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Facilities
+                    </label>
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your facilities here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="additionalFacilities inputCardForPropertyDetails">
+                    <label
+                      for="additionalFacilities"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Additional Facilities</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your additional facilities here.."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Rental Overview</h2>
+                <div class="rentalOverview flex flex-wrap justify-between">
+                  <div class="location inputCardRentalOverview">
+                    <label
+                      for="location"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Location
+                    </label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your address here.."
+                      required
+                    />
+                  </div>
+
+                  <div class="bedRooms inputCardRentalOverview">
+                    <label
+                      for="bedRooms "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Bed Rooms
+                    </label>
+                    <input
+                      type="number"
+                      id="bedRooms "
+                      name="bedRooms "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalRooms inputCardRentalOverview">
+                    <label
+                      for="totalRooms"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Rooms</label
+                    >
+                    <input
+                      type="number"
+                      id="totalRooms"
+                      name="totalRooms"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+
+                  <div class="floor inputCardRentalOverview">
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor
+                    </label>
+                    <textarea
+                      type="number"
+                      id="floor"
+                      name="floor"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="availableFrom inputCardRentalOverview">
+                    <label
+                      for="availableFrom"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Available From
+                    </label>
+                    <input
+                      type="date"
+                      id="availableFrom"
+                      name="availableFrom"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      required
+                    />
+                  </div>
+
+                  <div class="priceConditions inputCardRentalOverview">
+                    <label
+                      for="priceConditions"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Price Conditions</label
+                    >
+                    <input
+                      type="number"
+                      id="priceConditions"
+                      name="priceConditions"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3,000 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="depositBond inputCardRentalOverview">
+                    <label
+                      for="depositBond"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Deposit/Bond
+                    </label>
+                    <input
+                      type="number"
+                      id="depositBond"
+                      name="depositBond"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="2555.00 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="baths inputCardRentalOverview">
+                    <label
+                      for="baths"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Baths
+                    </label>
+                    <input
+                      type="number"
+                      id="baths"
+                      name="baths"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="2555.00 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalArea inputCardRentalOverview">
+                    <label
+                      for="totalArea "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Area (sq. ft)
+                    </label>
+                    <input
+                      type="number"
+                      id="totalArea "
+                      name="totalArea "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="1560"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalFloors inputCardRentalOverview">
+                    <label
+                      for="totalFloors "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Floors
+                    </label>
+                    <input
+                      type="number"
+                      id="totalFloors "
+                      name="totalFloors "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="10"
+                      required
+                    />
+                  </div>
+
+                  <div class="carParkingPerSpace inputCardRentalOverview">
+                    <label
+                      for="carParkingPerSpace "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Car Parking Per Space
+                    </label>
+                    <input
+                      type="number"
+                      id="carParkingPerSpace "
+                      name="carParkingPerSpace "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Indoor Features</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="indoorFeatures inputCardIndoorFeatures">
+                    <div class="flex align-middle justify-start space-x-6 my-3">
+                      <div class="communityHall">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="communityHall" class="text-sm"
+                          >Community Hall</label
+                        >
+                      </div>
+                      <div class="safetyGrills">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="safetyGrills" class="text-sm"
+                          >Safety Grills</label
+                        >
+                      </div>
+                      <div class="servantsRoom">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="servantsRoom" class="text-sm"
+                          >Servants Room</label
+                        >
+                      </div>
+                      <div class="servantsToilet">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="servantsToilet" class="text-sm"
+                          >Servants Toilet</label
+                        >
+                      </div>
+                      <div class="fireExit">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="fireExit" class="text-sm">Fire exit</label>
+                      </div>
+                      <div class="CCTV">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="CCTV" class="text-sm">CCTV</label>
+                      </div>
+                      <div class="WASAconnection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="WASAconnection" class="text-sm"
+                          >WASA connection</label
+                        >
+                      </div>
+                      <div class="DESCOconnection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="DESCOconnection" class="text-sm"
+                          >DESCO connection</label
+                        >
+                      </div>
+                      <div class="TITAS-GAS-Connection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="TITAS-GAS-Connection" class="text-sm"
+                          >TITAS GAS connection</label
+                        >
+                      </div>
+                      <div class="belcony">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="belcony" class="text-sm">Belcony</label>
+                      </div>
+                      <div class="interCom">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="interCom" class="text-sm">Inter Com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Outdoor Features</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="outdoorFeatures inputCardOutdoorFeatures">
+                    <div class="flex align-middle justify-start space-x-6 my-3">
+                      <div class="southFacing">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="southFacing" class="text-sm"
+                          >South facing</label
+                        >
+                      </div>
+                      <div class="roofTopGarden">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="roofTopGarden" class="text-sm"
+                          >Roof Top Garden</label
+                        >
+                      </div>
+                      <div class="driversQuarters">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="driversQuarters" class="text-sm"
+                          >Drivers quarters</label
+                        >
+                      </div>
+                      <div class="generator">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="generator" class="text-sm">Generator</label>
+                      </div>
+                      <div class="lift">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="lift" class="text-sm">Lift</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">House Images</h2>
+                <div class="tags flex justify-between">
+                  <div class="imageOne imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image One</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageTwo imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Two</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Three</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Four</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Five</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Six</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="my-modal-6" class="btn btn-error">Cancel</label>
+          <button
+            id="submitBTN"
+            type="submit"
+            class="btn btn-success focus:outline-none"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Edit Modal  -->
+    <input type="checkbox" id="my-modal-edit" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+      <div
+        class="alert alert-error shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden errAlartSection"
+      >
+        <div>
+          <span>Sorry! Please fill in all the form inputs.</span>
+        </div>
+      </div>
+      <div
+        class="alert alert-success shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden successAlartSection"
+      >
+        <div>
+          <span>Congratulations! Successfully edited your post.</span>
+        </div>
+      </div>
+      <div
+        class="modal-box h-full flex flex-col justify-between scrollbar-hide lg:max-w-[100vw]"
+      >
+        <div class="relative">
+          <h3 class="font-bold text-lg mb-4">Edit Property Sell Post!</h3>
+          <label
+            for="my-modal-edit"
+            class="material-symbols-outlined cancelBTN text-4xl absolute right-3 top-3 cursor-pointer hover:text-red-500 duration-300"
+            >cancel</label
+          >
+          <div>
+            <div class="flex justify-between space-x-1">
+              <form action="form" id="formID" class="space-y-4 w-full">
+                <div class="filtering flex align-middle space-x-10">
+                  <div
+                    class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="checkBoxes"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Property For</label
+                    >
+                    <div
+                      class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                    >
+                      <div class="rent">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="rentCheckBox checkbox checkbox-xs"
+                        />
+                        <label for="rent" class="text-sm">Rent</label>
+                      </div>
+                      <div class="sell">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="sellCheckBox checkbox checkbox-xs"
+                        />
+                        <label for="sell" class="text-sm">Sell</label>
+                      </div>
+                      <div class="both">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                        />
+                        <label for="both" class="text-sm">Both</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="view"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Property For</label
+                    >
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <div class="rent">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                          value="detail-view"
+                        />
+                        <label for="rent" class="text-sm">Detail View</label>
+                      </div>
+                      <div class="sell">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                          value="short-view"
+                        />
+                        <label for="sell" class="text-sm">Short View</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Title Area</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="postTitle inputCardTitleArea">
+                    <label
+                      for="postTitle"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Post Title</label
+                    >
+                    <input
+                      type="text"
+                      id="postTitle"
+                      name="postTitle"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: Family Apartment Seven"
+                      required
+                    />
+                  </div>
+
+                  <div class="skillsRequired inputCardTitleArea">
+                    <label
+                      for="skillsRequired"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Post Short Description</label
+                    >
+                    <textarea
+                      type="text"
+                      id="skillsRequired"
+                      rows="3"
+                      name="skillsRequired"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500 scrollbar-hide"
+                      placeholder="Put short description here.."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Price Details</h2>
+                <div class="priceDetail flex space-x-10">
+                  <div class="rent-month inputCardForPriceDetails">
+                    <label
+                      for="rent-month"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Rent/Month</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 550 (negotiable)"
+                      required
+                    />
+
+                    <label
+                      for="rent-month"
+                      class="block my-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Negotiable</label
+                    >
+                    <div class="flex space-x-4">
+                      <div class="yes flex space-x-3 items-center">
+                        <label
+                          for="rent-month"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >Yes</label
+                        >
+                        <input
+                          type="radio"
+                          name="radio-1"
+                          class="radio w-4 h-4"
+                          checked
+                        />
+                      </div>
+                      <div class="no flex space-x-3 items-center">
+                        <label
+                          for="rent-month"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >No</label
+                        >
+                        <input
+                          type="radio"
+                          name="radio-1"
+                          class="radio w-4 h-4"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="serviceCharge inputCardForPriceDetails">
+                    <label
+                      for="serviceCharge"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Service Charge</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="000.00 Tk per month, subject to change"
+                      required
+                    />
+                  </div>
+
+                  <div class="securityDeposit inputCardForPriceDetails">
+                    <label
+                      for="securityDeposit"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Security Deposit</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 month’s rent"
+                      required
+                    />
+                  </div>
+
+                  <div class="flatReleasePolicy inputCardForPriceDetails">
+                    <label
+                      for="flatReleasePolicy"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Release Policy</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 months earlier notice required"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Property Details</h2>
+                <div class="propertyDetails flex flex-wrap justify-between">
+                  <div class="addressAndArea inputCardForPropertyDetails">
+                    <label
+                      for="addressAndArea"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Address & Area</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your address here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="flatSize inputCardForPropertyDetails">
+                    <label
+                      for="flatSize"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Size</label
+                    >
+                    <input
+                      type="text"
+                      id="flatSize"
+                      name="flatSize"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 3000 Sq Feet."
+                      required
+                    />
+                  </div>
+
+                  <div class="floor inputCardForPropertyDetails">
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your floor here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="roomCategory inputCardForPropertyDetails">
+                    <label
+                      for="roomCategory"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Room Category</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your room category here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="facilities inputCardForPropertyDetails">
+                    <label
+                      for="facilities"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Facilities
+                    </label>
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your facilities here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="additionalFacilities inputCardForPropertyDetails">
+                    <label
+                      for="additionalFacilities"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Additional Facilities</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your additional facilities here.."
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Rental Overview</h2>
+                <div class="rentalOverview flex flex-wrap justify-between">
+                  <div class="location inputCardRentalOverview">
+                    <label
+                      for="location"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Location
+                    </label>
+                    <input
+                      type="text"
+                      id="location"
+                      name="location"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your address here.."
+                      required
+                    />
+                  </div>
+
+                  <div class="bedRooms inputCardRentalOverview">
+                    <label
+                      for="bedRooms "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Bed Rooms
+                    </label>
+                    <input
+                      type="number"
+                      id="bedRooms "
+                      name="bedRooms "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalRooms inputCardRentalOverview">
+                    <label
+                      for="totalRooms"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Rooms</label
+                    >
+                    <input
+                      type="number"
+                      id="totalRooms"
+                      name="totalRooms"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+
+                  <div class="floor inputCardRentalOverview">
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor
+                    </label>
+                    <textarea
+                      type="number"
+                      id="floor"
+                      name="floor"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div class="availableFrom inputCardRentalOverview">
+                    <label
+                      for="availableFrom"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Available From
+                    </label>
+                    <input
+                      type="date"
+                      id="availableFrom"
+                      name="availableFrom"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      required
+                    />
+                  </div>
+
+                  <div class="priceConditions inputCardRentalOverview">
+                    <label
+                      for="priceConditions"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Price Conditions</label
+                    >
+                    <input
+                      type="number"
+                      id="priceConditions"
+                      name="priceConditions"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3,000 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="depositBond inputCardRentalOverview">
+                    <label
+                      for="depositBond"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Deposit/Bond
+                    </label>
+                    <input
+                      type="number"
+                      id="depositBond"
+                      name="depositBond"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="2555.00 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="baths inputCardRentalOverview">
+                    <label
+                      for="baths"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Baths
+                    </label>
+                    <input
+                      type="number"
+                      id="baths"
+                      name="baths"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="2555.00 TK"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalArea inputCardRentalOverview">
+                    <label
+                      for="totalArea "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Area (sq. ft)
+                    </label>
+                    <input
+                      type="number"
+                      id="totalArea "
+                      name="totalArea "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="1560"
+                      required
+                    />
+                  </div>
+
+                  <div class="totalFloors inputCardRentalOverview">
+                    <label
+                      for="totalFloors "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Total Floors
+                    </label>
+                    <input
+                      type="number"
+                      id="totalFloors "
+                      name="totalFloors "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="10"
+                      required
+                    />
+                  </div>
+
+                  <div class="carParkingPerSpace inputCardRentalOverview">
+                    <label
+                      for="carParkingPerSpace "
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Car Parking Per Space
+                    </label>
+                    <input
+                      type="number"
+                      id="carParkingPerSpace "
+                      name="carParkingPerSpace "
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="01"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Indoor Features</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="indoorFeatures inputCardIndoorFeatures">
+                    <div class="flex align-middle justify-start space-x-6 my-3">
+                      <div class="communityHall">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="communityHall" class="text-sm"
+                          >Community Hall</label
+                        >
+                      </div>
+                      <div class="safetyGrills">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="safetyGrills" class="text-sm"
+                          >Safety Grills</label
+                        >
+                      </div>
+                      <div class="servantsRoom">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="servantsRoom" class="text-sm"
+                          >Servants Room</label
+                        >
+                      </div>
+                      <div class="servantsToilet">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="servantsToilet" class="text-sm"
+                          >Servants Toilet</label
+                        >
+                      </div>
+                      <div class="fireExit">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="fireExit" class="text-sm">Fire exit</label>
+                      </div>
+                      <div class="CCTV">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="CCTV" class="text-sm">CCTV</label>
+                      </div>
+                      <div class="WASAconnection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="WASAconnection" class="text-sm"
+                          >WASA connection</label
+                        >
+                      </div>
+                      <div class="DESCOconnection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="DESCOconnection" class="text-sm"
+                          >DESCO connection</label
+                        >
+                      </div>
+                      <div class="TITAS-GAS-Connection">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="TITAS-GAS-Connection" class="text-sm"
+                          >TITAS GAS connection</label
+                        >
+                      </div>
+                      <div class="belcony">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="belcony" class="text-sm">Belcony</label>
+                      </div>
+                      <div class="interCom">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="interCom" class="text-sm">Inter Com</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">Outdoor Features</h2>
+                <div class="titleArea flex space-x-10">
+                  <div class="outdoorFeatures inputCardOutdoorFeatures">
+                    <div class="flex align-middle justify-start space-x-6 my-3">
+                      <div class="southFacing">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="southFacing" class="text-sm"
+                          >South facing</label
+                        >
+                      </div>
+                      <div class="roofTopGarden">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="roofTopGarden" class="text-sm"
+                          >Roof Top Garden</label
+                        >
+                      </div>
+                      <div class="driversQuarters">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="driversQuarters" class="text-sm"
+                          >Drivers quarters</label
+                        >
+                      </div>
+                      <div class="generator">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="generator" class="text-sm">Generator</label>
+                      </div>
+                      <div class="lift">
+                        <input
+                          type="checkbox"
+                          checked="checked"
+                          class="checkbox checkbox-xs"
+                        />
+                        <label for="lift" class="text-sm">Lift</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <h2 class="text-xl font-bold underline">House Images</h2>
+                <div class="tags flex justify-between">
+                  <div class="imageOne imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image One</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageTwo imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Two</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Three</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Four</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Five</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                  <div class="imageThree imageUpload w-[15%]">
+                    <label
+                      for="tags"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Image Six</label
+                    >
+                    <img
+                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
+                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                      alt="image description"
+                    />
+                    <input
+                      type="file"
+                      id="tags"
+                      name="tags"
+                      class="formInput"
+                      placeholder="Example: Part-Time, Full-time, Remote... "
+                      required
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="my-modal-edit" class="btn btn-error">Cancel</label>
+          <button
+            id="submitBTN"
+            type="submit"
+            class="btn btn-success focus:outline-none"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preview Modal  -->
+    <input type="checkbox" id="my-modal-view" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle">
+      <div
+        class="modal-box h-full flex flex-col justify-between scrollbar-hide"
+      >
+        <div>
+          <h3 class="font-bold text-lg">Job Preview!</h3>
+          <div>
+            <div class="flex justify-between space-x-1">
+              <form action="form" class="space-y-4 w-full">
+                <!-- Logo  -->
+                <div class="logoPreview">
+                  <img
+                    src="https://foodshahibd.com/foodshahi_ci/assets/media/restaurants/logo/1552416111_logo.png"
+                    alt=""
+                    srcset=""
+                    class="w-24 h-24 rounded-lg shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+                  />
+                </div>
+
+                <div class="companyName">
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                    >Company Name</label
+                  >
+                  <p>FoodShahiBD - Home delivery service in Rajshahi</p>
+                </div>
+
+                <div class="date flex my-6 w-full flex-col items-start">
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                    >Apply Star to End Date</label
+                  >
+                  <p>Apply Start: 21 Sep, 2023 | Apply End: 21 Oct, 2023</p>
+                </div>
+
+                <div class="flex justify-between">
+                  <div class="category w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Category</label
+                    >
+                    <p>Manager</p>
+                  </div>
+
+                  <div class="vacancyType w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Vacancy Type</label
+                    >
+                    <p>Full Time</p>
+                  </div>
+                </div>
+
+                <div class="flex justify-between">
+                  <div class="offeredSalary w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Offered Salary</label
+                    >
+                    <p>15,000.00 BDT</p>
+                  </div>
+
+                  <div class="experience w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Experience</label
+                    >
+                    <p>Minimum 2 years</p>
+                  </div>
+                </div>
+
+                <div class="flex justify-between">
+                  <div class="industry w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Industry</label
+                    >
+                    <p>Mangemant</p>
+                  </div>
+
+                  <div class="qualification w-[48%]">
+                    <label
+                      for="first_name"
+                      class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                      >Qualification</label
+                    >
+                    <p>BSC in Management</p>
+                  </div>
+                </div>
+
+                <div class="jobDetails">
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                    >Job Details</label
+                  >
+                  <div>
+                    <p>
+                      Far much that one rank beheld greenbird after outside
+                      ignobly allegedly more when oh arrogantly vehement
+                      irresistibly fussy penguin insect additionally wow
+                      absolutely crud meretriciously hastily dalmatian a
+                      glowered inset one echidna cassowary some parrot and much
+                      as goodness some froze the sullen much connected bat
+                      wonderfully on instantaneously eel valiantly petted this
+                      along across highhandedly much dog out the much alas
+                      evasively neutral lazy reset. Repeatedly dreamed alas
+                      opossum but dramatically despite expeditiously that
+                      jeepers loosely yikes that as or eel underneath kept and
+                      slept compactly far purred sure abidingly up above fitting
+                      to strident wiped set waywardly far the and pangolin horse
+                      approving paid chuckled cassowary oh above a much opposite
+                      far much hypnotically more therefore wasp less that hey
+                      apart well like while superbly orca and far hence one.Far
+                      much that one rank beheld greenbird after outside ignobly
+                      allegedly more when oh arrogantly vehement irresistibly
+                      fussy penguin insect additionally wow absolutely crud
+                      meretriciously hastily dalmatian a glowered inset one
+                      echidna cassowary some parrot and much as goodness some
+                      froze the sullen much connected bat wonderfully on
+                      instantaneously eel valiantly petted this along across
+                      highhandedly much dog out the much alas evasively neutral
+                      lazy reset. Repeatedly dreamed alas opossum but
+                      dramatically despite expeditiously that jeepers loosely
+                      yikes that as or eel underneath kept and slept compactly
+                      far purred sure abidingly up above fitting to strident
+                      wiped set waywardly far the and.
+                    </p>
+                  </div>
+                </div>
+                <div class="jobDetails">
+                  <label
+                    for="first_name"
+                    class="block mb-2 text-sm text-gray-400 font-semibold dark:text-gray-500"
+                    >Skills Required</label
+                  >
+                  <div>
+                    <p>
+                      Far much that one rank beheld greenbird after outside
+                      ignobly allegedly more when oh arrogantly vehement
+                      irresistibly fussy penguin insect additionally wow
+                      absolutely crud meretriciously hastily dalmatian a
+                      glowered inset one echidna cassowary some parrot and much
+                      as goodness some froze the sullen much connected bat
+                      wonderfully on instantaneously. Far much that one rank
+                      beheld greenbird after outside ignobly allegedly more when
+                      oh arrogantly vehement irresistibly fussy penguin insect
+                      additionally. Strong Market connections for business
+                      development of the bank. Strong knowledge of Corporate
+                      products and regulatory requirements. Proficiency in
+                      spoken and written English. Analytical skills Knowledge of
+                      Corporate Banking, Risk Management, Compliance and Central
+                      Bank regulations.
+                    </p>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="my-modal-view" class="btn btn-success">Okay</label>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Add Modal  -->
+    <input type="checkbox" id="addCategories" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle categoriesAddModal">
+      <div
+        class="alert alert-error shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden errAlartSection"
+      >
+        <div>
+          <span>Sorry! Please fill in all the form inputs.</span>
+        </div>
+      </div>
+      <div
+        class="alert alert-success shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden successAlartSection"
+      >
+        <div>
+          <span>Congratulations! Successfully added a new category.</span>
+        </div>
+      </div>
+      <div
+        class="modal-box h-auto flex flex-col justify-between scrollbar-hide"
+      >
+        <div>
+          <h3 class="font-bold text-lg mb-4">Add New Categories!</h3>
+          <div>
+            <div class="flex justify-between space-x-1">
+              <form action="form" id="categoryformID" class="space-y-4 w-full">
+                <div class="categoriesTitle">
+                  <label
+                    for="categoriesTitle"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Category Title</label
+                  >
+                  <input
+                    type="text"
+                    id="categoriesTitle"
+                    name="categoriesTitle"
+                    class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                    placeholder="example"
+                    required
+                  />
+                </div>
+                <div class="checkBoxes">
+                  <label
+                    for="checkBoxes"
+                    class="block text-sm font-medium text-gray-900 dark:text-white"
+                    >Property For</label
+                  >
+                  <div
+                    class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                  >
+                    <div class="rent">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="rentCheckBox checkbox checkbox-xs"
+                      />
+                      <label for="rent" class="text-sm">Rent</label>
+                    </div>
+                    <div class="sell">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="sellCheckBox checkbox checkbox-xs"
+                      />
+                      <label for="sell" class="text-sm">Sell</label>
+                    </div>
+                    <div class="both">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                      />
+                      <label for="both" class="text-sm">Both</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="view">
+                  <label
+                    for="view"
+                    class="block text-sm font-medium text-gray-900 dark:text-white"
+                    >Property For</label
+                  >
+                  <div class="flex align-middle space-x-4 mt-3">
+                    <div class="rent">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="checkbox checkbox-xs"
+                        value="detail-view"
+                      />
+                      <label for="rent" class="text-sm">Detail View</label>
+                    </div>
+                    <div class="sell">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="checkbox checkbox-xs"
+                        value="short-view"
+                      />
+                      <label for="sell" class="text-sm">Short View</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="addCategories" class="btn btn-error">Cancel</label>
+          <button
+            id="categorySubmitBTN"
+            type="submit"
+            class="btn btn-success focus:outline-none"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Categories Edit Modal  -->
+    <input type="checkbox" id="editCategories" class="modal-toggle" />
+    <div class="modal modal-bottom sm:modal-middle categoriesAddModal">
+      <div
+        class="alert alert-error shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden errAlartSection"
+      >
+        <div>
+          <span>Sorry! Please fill in all the form inputs.</span>
+        </div>
+      </div>
+      <div
+        class="alert alert-success shadow-lg fixed top-16 w-auto z-10 opacity-0 duration-500 overflow-hidden successAlartSection"
+      >
+        <div>
+          <span>Congratulations! Successfully added a new category.</span>
+        </div>
+      </div>
+      <div
+        class="modal-box h-auto flex flex-col justify-between scrollbar-hide"
+      >
+        <div>
+          <h3 class="font-bold text-lg mb-4">Edit Categories!</h3>
+          <div>
+            <div class="flex justify-between space-x-1">
+              <form action="form" id="categoryformID" class="space-y-4 w-full">
+                <div class="categoriesTitle">
+                  <label
+                    for="categoriesTitle"
+                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    >Category Title</label
+                  >
+                  <input
+                    type="text"
+                    id="categoriesTitle"
+                    name="categoriesTitle"
+                    class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                    placeholder="example"
+                    required
+                  />
+                </div>
+
+                <div class="checkBoxes">
+                  <label
+                    for="checkBoxes"
+                    class="block text-sm font-medium text-gray-900 dark:text-white"
+                    >Property For</label
+                  >
+                  <div
+                    class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                  >
+                    <div class="rent">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="rentCheckBox checkbox checkbox-xs"
+                      />
+                      <label for="rent" class="text-sm">Rent</label>
+                    </div>
+                    <div class="sell">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="sellCheckBox checkbox checkbox-xs"
+                      />
+                      <label for="sell" class="text-sm">Sell</label>
+                    </div>
+                    <div class="both">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                      />
+                      <label for="both" class="text-sm">Both</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="view">
+                  <label
+                    for="view"
+                    class="block text-sm font-medium text-gray-900 dark:text-white"
+                    >Property For</label
+                  >
+                  <div class="flex align-middle space-x-4 mt-3">
+                    <div class="rent">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="checkbox checkbox-xs"
+                        value="detail-view"
+                      />
+                      <label for="rent" class="text-sm">Detail View</label>
+                    </div>
+                    <div class="sell">
+                      <input
+                        type="checkbox"
+                        checked="checked"
+                        class="checkbox checkbox-xs"
+                        value="short-view"
+                      />
+                      <label for="sell" class="text-sm">Short View</label>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-action">
+          <label for="editCategories" class="btn btn-error">Cancel</label>
+          <button
+            id="categorySubmitBTN"
+            type="submit"
+            class="btn btn-success focus:outline-none"
+          >
+            Add
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Push Notification  -->
+    <div id="pushNotification"></div>
+    <script src="./js/pushNotification.js"></script>
+
+    <!-- Notificatin  -->
+    <div id="notification"></div>
+    <script src="./js/notification.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+
+    <!-- Daterange  -->
+    <script src="./node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <!-- Iconic  -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <!-- Custome Js  -->
+    <script src="./js/navigationMenu.js"></script>
+    <script src="./js/notificationBar.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="./js/dateRange.js"></script>
+    <!-- <script src="./js/formFetch.js"></script> -->
+    <script src="./js/activeInactiveCard.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
