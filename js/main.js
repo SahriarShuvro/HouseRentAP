@@ -11,36 +11,45 @@ imageUpload.forEach(eachImageUploader => {
   })
 });
 
-// Code For "Property Sell" Page's Category Tabs "add categories" both button
 
-window.onload = function categoryAddForCheckAll(){
+// Code for "Add Sell Post" modal's top section
 
-  // let bothBtnForCheckAll = document.querySelectorAll('.bothBtnForCheckAll')
-  let checkBoxForProperty = document.querySelectorAll('.checkBoxForProperty')
-  let isCheck = true;
 
-  checkBoxForProperty.forEach(eachCheckBoxForProperty => {
+document.addEventListener('DOMContentLoaded', function() {
 
-    let eachBothBtnForCheckAll = eachCheckBoxForProperty.querySelector('.bothBtnForCheckAll')
-    
-    eachBothBtnForCheckAll.addEventListener('click',function(){
+  // Get the input and output elements
+
+
+  let getParent = document.querySelectorAll('.FORM');
+  
+  getParent.forEach(eachGetParent => {
+    let dropDownInput = eachGetParent.querySelector('.categoriesForProperty');
+    let getOutPut = eachGetParent.querySelector('.propertyForDisableInput');
+    let detailsViewSection = eachGetParent.querySelector('.detailsViewSection')
+  
+    dropDownInput.addEventListener('change', function() {
+      let selectedValue = dropDownInput.value;
       
-      let checkbox = eachCheckBoxForProperty.querySelectorAll('.checkbox');
-      if (!isCheck) {
-        checkbox.forEach(checkboxEach => {
-          checkboxEach.setAttribute('checked', 'checked')
-        });
-        eachBothBtnForCheckAll.setAttribute('value', 'Both')
-        
-      } else {
-        checkbox.forEach(checkboxEach => {
-          checkboxEach.removeAttribute('checked', 'checked')
-        });
-        eachBothBtnForCheckAll.removeAttribute('value', 'Both')
+      // Use a switch statement to set the output value based on the selected option
+      switch (selectedValue) {
+        case 'Apartment':
+          getOutPut.value = 'Both';
+          detailsViewSection.removeAttribute('style', 'display: none')
+          break;
+        case 'Land':
+          getOutPut.value = 'Sell';
+          detailsViewSection.setAttribute('style', 'display: none')
+          break;
+        case 'Hostel':
+          getOutPut.value = 'Rent';
+          detailsViewSection.removeAttribute('style', 'display: none')
+          break;
+        default:
+          getOutPut.value = 'Property For';
+          detailsViewSection.removeAttribute('style', 'display: none')
+          break;
       }
-      isCheck = !isCheck
-    })
-  });
+    });
+});
 
-}
-
+});

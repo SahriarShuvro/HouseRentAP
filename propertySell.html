@@ -404,7 +404,7 @@
                   <tr>
                     <th scope="col" class="p-4">Photo</th>
                     <th scope="col" class="px-6 py-3">Title</th>
-                    <th scope="col" class="px-6 py-3">Property FOr</th>
+                    <th scope="col" class="px-6 py-3">Property For</th>
                     <th scope="col" class="px-6 py-3">Aavailable From</th>
                     <th scope="col" class="px-6 py-3">Views</th>
                     <th scope="col" class="px-6 py-3">Action</th>
@@ -808,10 +808,10 @@
                     <h5
                       class="mb-1 text-xl font-medium text-gray-900 dark:text-white"
                     >
-                      Temporary
+                      Title
                     </h5>
                     <span class="text-xs text-gray-500 dark:text-gray-400"
-                      >Total Job (198)</span
+                      >Rent (Details View)</span
                     >
                     <div class="flex mt-4 space-x-3 md:mt-6">
                       <a
@@ -863,46 +863,115 @@
           >
           <div>
             <div class="flex justify-between space-x-1">
-              <form action="form" id="formID" class="space-y-4 w-full">
+              <form action="form" id="formID" class="FORM space-y-4 w-full">
                 <div class="filtering flex align-middle space-x-10">
-                  <div
+                  <!-- <div
                     class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
                     <label
-                      for="checkBoxes"
+                      for="checkBoxForProperty"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Property For</label
                     >
                     <div
                       class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                      id="checkBoxForProperty"
                     >
-                      <div class="rent">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
-                          checked="checked"
-                          class="rentCheckBox checkbox checkbox-xs"
+                          id="rent-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="rent" class="text-sm">Rent</label>
+                        <label
+                          for="rent-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Rent</label
+                        >
                       </div>
-                      <div class="sell">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
-                          checked="checked"
-                          class="sellCheckBox checkbox checkbox-xs"
+                          id="sell-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="sell" class="text-sm">Sell</label>
+                        <label
+                          for="sell-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Sell</label
+                        >
                       </div>
-                      <div class="both">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
+                          id="both-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
                           checked="checked"
-                          class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="both" class="text-sm">Both</label>
+                        <label
+                          for="both-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Both</label
+                        >
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="view"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Category</label
+                    >
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <!-- <div class="flex items-center">
+                        <input
+                          id="detail-view-radio"
+                          type="radio"
+                          value=""
+                          name="propery-two-radio"
+                          checked
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="detail-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Details View</label
+                        >
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          id="short-view-radio"
+                          type="radio"
+                          value=""
+                          name="propery-two-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="short-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Short View</label
+                        >
+                      </div> -->
+                      <select
+                        name="categoriesForProperty"
+                        class="formInput categoriesForProperty"
+                      >
+                        <option value="">--Select Company--</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Land">Land</option>
+                        <option value="Hostel">Hostel</option>
+                      </select>
+                    </div>
+                  </div>
                   <div
                     class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
@@ -912,24 +981,14 @@
                       >Property For</label
                     >
                     <div class="flex align-middle space-x-4 mt-3">
-                      <div class="rent">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                          value="detail-view"
-                        />
-                        <label for="rent" class="text-sm">Detail View</label>
-                      </div>
-                      <div class="sell">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                          value="short-view"
-                        />
-                        <label for="sell" class="text-sm">Short View</label>
-                      </div>
+                      <input
+                        type="text"
+                        name="rent-month"
+                        class="propertyForDisableInput bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="000.00 Tk per month, subject to change"
+                        disabled
+                        value="Property for"
+                      />
                     </div>
                   </div>
                 </div>
@@ -994,29 +1053,33 @@
                     >
                     <div class="flex space-x-4">
                       <div class="yes flex space-x-3 items-center">
+                        <input
+                          id="yes-radio"
+                          type="radio"
+                          value=""
+                          name="negotiale-radio"
+                          checked="checked"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
                         <label
                           for="rent-month"
                           class="block text-sm font-medium text-gray-900 dark:text-white"
                           >Yes</label
                         >
-                        <input
-                          type="radio"
-                          name="radio-1"
-                          class="radio w-4 h-4"
-                          checked
-                        />
                       </div>
                       <div class="no flex space-x-3 items-center">
+                        <input
+                          id="no-radio"
+                          type="radio"
+                          value=""
+                          name="negotiale-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
                         <label
                           for="rent-month"
                           class="block text-sm font-medium text-gray-900 dark:text-white"
                           >No</label
                         >
-                        <input
-                          type="radio"
-                          name="radio-1"
-                          class="radio w-4 h-4"
-                        />
                       </div>
                     </div>
                   </div>
@@ -1174,469 +1237,487 @@
                   </div>
                 </div>
 
-                <h2 class="text-xl font-bold underline">Rental Overview</h2>
-                <div class="rentalOverview flex flex-wrap justify-between">
-                  <div class="location inputCardRentalOverview">
-                    <label
-                      for="location"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Location
-                    </label>
-                    <input
-                      type="text"
-                      id="location"
-                      name="location"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your address here.."
-                      required
-                    />
+                <div class="detailsViewSection space-y-4">
+                  <h2 class="text-xl font-bold underline">Rental Overview</h2>
+                  <div class="rentalOverview flex flex-wrap justify-between">
+                    <div class="location inputCardRentalOverview">
+                      <label
+                        for="location"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Location
+                      </label>
+                      <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Put your address here.."
+                        required
+                      />
+                    </div>
+
+                    <div class="bedRooms inputCardRentalOverview">
+                      <label
+                        for="bedRooms "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Bed Rooms
+                      </label>
+                      <input
+                        type="number"
+                        id="bedRooms "
+                        name="bedRooms "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalRooms inputCardRentalOverview">
+                      <label
+                        for="totalRooms"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Rooms</label
+                      >
+                      <input
+                        type="number"
+                        id="totalRooms"
+                        name="totalRooms"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
+
+                    <div class="floor inputCardRentalOverview">
+                      <label
+                        for="floor"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Floor
+                      </label>
+                      <textarea
+                        type="number"
+                        id="floor"
+                        name="floor"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="availableFrom inputCardRentalOverview">
+                      <label
+                        for="availableFrom"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Available From
+                      </label>
+                      <input
+                        type="date"
+                        id="availableFrom"
+                        name="availableFrom"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        required
+                      />
+                    </div>
+
+                    <div class="priceConditions inputCardRentalOverview">
+                      <label
+                        for="priceConditions"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Price Conditions</label
+                      >
+                      <input
+                        type="number"
+                        id="priceConditions"
+                        name="priceConditions"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="3,000 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="depositBond inputCardRentalOverview">
+                      <label
+                        for="depositBond"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Deposit/Bond
+                      </label>
+                      <input
+                        type="number"
+                        id="depositBond"
+                        name="depositBond"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="2555.00 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="baths inputCardRentalOverview">
+                      <label
+                        for="baths"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Baths
+                      </label>
+                      <input
+                        type="number"
+                        id="baths"
+                        name="baths"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="2555.00 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalArea inputCardRentalOverview">
+                      <label
+                        for="totalArea "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Area (sq. ft)
+                      </label>
+                      <input
+                        type="number"
+                        id="totalArea "
+                        name="totalArea "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="1560"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalFloors inputCardRentalOverview">
+                      <label
+                        for="totalFloors "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Floors
+                      </label>
+                      <input
+                        type="number"
+                        id="totalFloors "
+                        name="totalFloors "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="10"
+                        required
+                      />
+                    </div>
+
+                    <div class="carParkingPerSpace inputCardRentalOverview">
+                      <label
+                        for="carParkingPerSpace "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Car Parking Per Space
+                      </label>
+                      <input
+                        type="number"
+                        id="carParkingPerSpace "
+                        name="carParkingPerSpace "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
                   </div>
 
-                  <div class="bedRooms inputCardRentalOverview">
-                    <label
-                      for="bedRooms "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Bed Rooms
-                    </label>
-                    <input
-                      type="number"
-                      id="bedRooms "
-                      name="bedRooms "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalRooms inputCardRentalOverview">
-                    <label
-                      for="totalRooms"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Rooms</label
-                    >
-                    <input
-                      type="number"
-                      id="totalRooms"
-                      name="totalRooms"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-
-                  <div class="floor inputCardRentalOverview">
-                    <label
-                      for="floor"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Floor
-                    </label>
-                    <textarea
-                      type="number"
-                      id="floor"
-                      name="floor"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="availableFrom inputCardRentalOverview">
-                    <label
-                      for="availableFrom"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Available From
-                    </label>
-                    <input
-                      type="date"
-                      id="availableFrom"
-                      name="availableFrom"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      required
-                    />
-                  </div>
-
-                  <div class="priceConditions inputCardRentalOverview">
-                    <label
-                      for="priceConditions"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Price Conditions</label
-                    >
-                    <input
-                      type="number"
-                      id="priceConditions"
-                      name="priceConditions"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="3,000 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="depositBond inputCardRentalOverview">
-                    <label
-                      for="depositBond"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Deposit/Bond
-                    </label>
-                    <input
-                      type="number"
-                      id="depositBond"
-                      name="depositBond"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="2555.00 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="baths inputCardRentalOverview">
-                    <label
-                      for="baths"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Baths
-                    </label>
-                    <input
-                      type="number"
-                      id="baths"
-                      name="baths"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="2555.00 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalArea inputCardRentalOverview">
-                    <label
-                      for="totalArea "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Area (sq. ft)
-                    </label>
-                    <input
-                      type="number"
-                      id="totalArea "
-                      name="totalArea "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="1560"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalFloors inputCardRentalOverview">
-                    <label
-                      for="totalFloors "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Floors
-                    </label>
-                    <input
-                      type="number"
-                      id="totalFloors "
-                      name="totalFloors "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="10"
-                      required
-                    />
-                  </div>
-
-                  <div class="carParkingPerSpace inputCardRentalOverview">
-                    <label
-                      for="carParkingPerSpace "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Car Parking Per Space
-                    </label>
-                    <input
-                      type="number"
-                      id="carParkingPerSpace "
-                      name="carParkingPerSpace "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <h2 class="text-xl font-bold underline">Indoor Features</h2>
-                <div class="titleArea flex space-x-10">
-                  <div class="indoorFeatures inputCardIndoorFeatures">
-                    <div class="flex align-middle justify-start space-x-6 my-3">
-                      <div class="communityHall">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="communityHall" class="text-sm"
-                          >Community Hall</label
-                        >
-                      </div>
-                      <div class="safetyGrills">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="safetyGrills" class="text-sm"
-                          >Safety Grills</label
-                        >
-                      </div>
-                      <div class="servantsRoom">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="servantsRoom" class="text-sm"
-                          >Servants Room</label
-                        >
-                      </div>
-                      <div class="servantsToilet">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="servantsToilet" class="text-sm"
-                          >Servants Toilet</label
-                        >
-                      </div>
-                      <div class="fireExit">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="fireExit" class="text-sm">Fire exit</label>
-                      </div>
-                      <div class="CCTV">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="CCTV" class="text-sm">CCTV</label>
-                      </div>
-                      <div class="WASAconnection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="WASAconnection" class="text-sm"
-                          >WASA connection</label
-                        >
-                      </div>
-                      <div class="DESCOconnection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="DESCOconnection" class="text-sm"
-                          >DESCO connection</label
-                        >
-                      </div>
-                      <div class="TITAS-GAS-Connection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="TITAS-GAS-Connection" class="text-sm"
-                          >TITAS GAS connection</label
-                        >
-                      </div>
-                      <div class="belcony">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="belcony" class="text-sm">Belcony</label>
-                      </div>
-                      <div class="interCom">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="interCom" class="text-sm">Inter Com</label>
+                  <h2 class="text-xl font-bold underline">Indoor Features</h2>
+                  <div class="indoorFeatures flex space-x-10">
+                    <div class="indoorFeatures inputCardIndoorFeatures">
+                      <div
+                        class="flex align-middle justify-start space-x-6 my-3"
+                      >
+                        <div class="communityHall">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="communityHall" class="text-sm"
+                            >Community Hall</label
+                          >
+                        </div>
+                        <div class="safetyGrills">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="safetyGrills" class="text-sm"
+                            >Safety Grills</label
+                          >
+                        </div>
+                        <div class="servantsRoom">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="servantsRoom" class="text-sm"
+                            >Servants Room</label
+                          >
+                        </div>
+                        <div class="servantsToilet">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="servantsToilet" class="text-sm"
+                            >Servants Toilet</label
+                          >
+                        </div>
+                        <div class="fireExit">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="fireExit" class="text-sm"
+                            >Fire exit</label
+                          >
+                        </div>
+                        <div class="CCTV">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="CCTV" class="text-sm">CCTV</label>
+                        </div>
+                        <div class="WASAconnection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="WASAconnection" class="text-sm"
+                            >WASA connection</label
+                          >
+                        </div>
+                        <div class="DESCOconnection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="DESCOconnection" class="text-sm"
+                            >DESCO connection</label
+                          >
+                        </div>
+                        <div class="TITAS-GAS-Connection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="TITAS-GAS-Connection" class="text-sm"
+                            >TITAS GAS connection</label
+                          >
+                        </div>
+                        <div class="belcony">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="belcony" class="text-sm">Belcony</label>
+                        </div>
+                        <div class="interCom">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="interCom" class="text-sm"
+                            >Inter Com</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <h2 class="text-xl font-bold underline">Outdoor Features</h2>
-                <div class="titleArea flex space-x-10">
-                  <div class="outdoorFeatures inputCardOutdoorFeatures">
-                    <div class="flex align-middle justify-start space-x-6 my-3">
-                      <div class="southFacing">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="southFacing" class="text-sm"
-                          >South facing</label
-                        >
-                      </div>
-                      <div class="roofTopGarden">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="roofTopGarden" class="text-sm"
-                          >Roof Top Garden</label
-                        >
-                      </div>
-                      <div class="driversQuarters">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="driversQuarters" class="text-sm"
-                          >Drivers quarters</label
-                        >
-                      </div>
-                      <div class="generator">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="generator" class="text-sm">Generator</label>
-                      </div>
-                      <div class="lift">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="lift" class="text-sm">Lift</label>
+                  <h2 class="text-xl font-bold underline">Outdoor Features</h2>
+                  <div class="outdoorFeatures flex space-x-10">
+                    <div class="outdoorFeatures inputCardOutdoorFeatures">
+                      <div
+                        class="flex align-middle justify-start space-x-6 my-3"
+                      >
+                        <div class="southFacing">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="southFacing" class="text-sm"
+                            >South facing</label
+                          >
+                        </div>
+                        <div class="roofTopGarden">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="roofTopGarden" class="text-sm"
+                            >Roof Top Garden</label
+                          >
+                        </div>
+                        <div class="driversQuarters">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="driversQuarters" class="text-sm"
+                            >Drivers quarters</label
+                          >
+                        </div>
+                        <div class="generator">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="generator" class="text-sm"
+                            >Generator</label
+                          >
+                        </div>
+                        <div class="lift">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="lift" class="text-sm">Lift</label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <h2 class="text-xl font-bold underline">House Images</h2>
-                <div class="tags flex justify-between">
-                  <div class="imageOne imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image One</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageTwo imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Two</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Three</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Four</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Five</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Six</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
+                  <h2 class="text-xl font-bold underline">House Images</h2>
+                  <div class="houseImages tags flex justify-between">
+                    <div class="imageOne imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image One</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageTwo imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Two</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Three</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Four</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Five</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Six</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </form>
@@ -1685,46 +1766,115 @@
           >
           <div>
             <div class="flex justify-between space-x-1">
-              <form action="form" id="formID" class="space-y-4 w-full">
+              <form action="form" id="formID" class="FORM space-y-4 w-full">
                 <div class="filtering flex align-middle space-x-10">
-                  <div
+                  <!-- <div
                     class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
                     <label
-                      for="checkBoxes"
+                      for="checkBoxForProperty"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Property For</label
                     >
                     <div
                       class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                      id="checkBoxForProperty"
                     >
-                      <div class="rent">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
-                          checked="checked"
-                          class="rentCheckBox checkbox checkbox-xs"
+                          id="rent-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="rent" class="text-sm">Rent</label>
+                        <label
+                          for="rent-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Rent</label
+                        >
                       </div>
-                      <div class="sell">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
-                          checked="checked"
-                          class="sellCheckBox checkbox checkbox-xs"
+                          id="sell-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="sell" class="text-sm">Sell</label>
+                        <label
+                          for="sell-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Sell</label
+                        >
                       </div>
-                      <div class="both">
+                      <div class="flex items-center">
                         <input
-                          type="checkbox"
+                          id="both-radio"
+                          type="radio"
+                          value=""
+                          name="propery-one-radio"
                           checked="checked"
-                          class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                         />
-                        <label for="both" class="text-sm">Both</label>
+                        <label
+                          for="both-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Both</label
+                        >
                       </div>
                     </div>
-                  </div>
+                  </div> -->
 
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  >
+                    <label
+                      for="view"
+                      class="block text-sm font-medium text-gray-900 dark:text-white"
+                      >Category</label
+                    >
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <!-- <div class="flex items-center">
+                        <input
+                          id="detail-view-radio"
+                          type="radio"
+                          value=""
+                          name="propery-two-radio"
+                          checked
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="detail-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Details View</label
+                        >
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          id="short-view-radio"
+                          type="radio"
+                          value=""
+                          name="propery-two-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="short-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Short View</label
+                        >
+                      </div> -->
+                      <select
+                        name="categoriesForProperty"
+                        class="formInput categoriesForProperty"
+                      >
+                        <option value="">--Select Company--</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Land">Land</option>
+                        <option value="Hostel">Hostel</option>
+                      </select>
+                    </div>
+                  </div>
                   <div
                     class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
@@ -1734,24 +1884,14 @@
                       >Property For</label
                     >
                     <div class="flex align-middle space-x-4 mt-3">
-                      <div class="rent">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                          value="detail-view"
-                        />
-                        <label for="rent" class="text-sm">Detail View</label>
-                      </div>
-                      <div class="sell">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                          value="short-view"
-                        />
-                        <label for="sell" class="text-sm">Short View</label>
-                      </div>
+                      <input
+                        type="text"
+                        name="rent-month"
+                        class="propertyForDisableInput bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="000.00 Tk per month, subject to change"
+                        disabled
+                        value="Property for"
+                      />
                     </div>
                   </div>
                 </div>
@@ -1816,29 +1956,33 @@
                     >
                     <div class="flex space-x-4">
                       <div class="yes flex space-x-3 items-center">
+                        <input
+                          id="yes-radio"
+                          type="radio"
+                          value=""
+                          name="negotiale-radio"
+                          checked="checked"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
                         <label
                           for="rent-month"
                           class="block text-sm font-medium text-gray-900 dark:text-white"
                           >Yes</label
                         >
-                        <input
-                          type="radio"
-                          name="radio-1"
-                          class="radio w-4 h-4"
-                          checked
-                        />
                       </div>
                       <div class="no flex space-x-3 items-center">
+                        <input
+                          id="no-radio"
+                          type="radio"
+                          value=""
+                          name="negotiale-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
                         <label
                           for="rent-month"
                           class="block text-sm font-medium text-gray-900 dark:text-white"
                           >No</label
                         >
-                        <input
-                          type="radio"
-                          name="radio-1"
-                          class="radio w-4 h-4"
-                        />
                       </div>
                     </div>
                   </div>
@@ -1996,469 +2140,487 @@
                   </div>
                 </div>
 
-                <h2 class="text-xl font-bold underline">Rental Overview</h2>
-                <div class="rentalOverview flex flex-wrap justify-between">
-                  <div class="location inputCardRentalOverview">
-                    <label
-                      for="location"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Location
-                    </label>
-                    <input
-                      type="text"
-                      id="location"
-                      name="location"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your address here.."
-                      required
-                    />
+                <div class="detailsViewSection space-y-4">
+                  <h2 class="text-xl font-bold underline">Rental Overview</h2>
+                  <div class="rentalOverview flex flex-wrap justify-between">
+                    <div class="location inputCardRentalOverview">
+                      <label
+                        for="location"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Location
+                      </label>
+                      <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="Put your address here.."
+                        required
+                      />
+                    </div>
+
+                    <div class="bedRooms inputCardRentalOverview">
+                      <label
+                        for="bedRooms "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Bed Rooms
+                      </label>
+                      <input
+                        type="number"
+                        id="bedRooms "
+                        name="bedRooms "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalRooms inputCardRentalOverview">
+                      <label
+                        for="totalRooms"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Rooms</label
+                      >
+                      <input
+                        type="number"
+                        id="totalRooms"
+                        name="totalRooms"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
+
+                    <div class="floor inputCardRentalOverview">
+                      <label
+                        for="floor"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Floor
+                      </label>
+                      <textarea
+                        type="number"
+                        id="floor"
+                        name="floor"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      ></textarea>
+                    </div>
+
+                    <div class="availableFrom inputCardRentalOverview">
+                      <label
+                        for="availableFrom"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Available From
+                      </label>
+                      <input
+                        type="date"
+                        id="availableFrom"
+                        name="availableFrom"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        required
+                      />
+                    </div>
+
+                    <div class="priceConditions inputCardRentalOverview">
+                      <label
+                        for="priceConditions"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Price Conditions</label
+                      >
+                      <input
+                        type="number"
+                        id="priceConditions"
+                        name="priceConditions"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="3,000 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="depositBond inputCardRentalOverview">
+                      <label
+                        for="depositBond"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Deposit/Bond
+                      </label>
+                      <input
+                        type="number"
+                        id="depositBond"
+                        name="depositBond"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="2555.00 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="baths inputCardRentalOverview">
+                      <label
+                        for="baths"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Baths
+                      </label>
+                      <input
+                        type="number"
+                        id="baths"
+                        name="baths"
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="2555.00 TK"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalArea inputCardRentalOverview">
+                      <label
+                        for="totalArea "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Area (sq. ft)
+                      </label>
+                      <input
+                        type="number"
+                        id="totalArea "
+                        name="totalArea "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="1560"
+                        required
+                      />
+                    </div>
+
+                    <div class="totalFloors inputCardRentalOverview">
+                      <label
+                        for="totalFloors "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Total Floors
+                      </label>
+                      <input
+                        type="number"
+                        id="totalFloors "
+                        name="totalFloors "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="10"
+                        required
+                      />
+                    </div>
+
+                    <div class="carParkingPerSpace inputCardRentalOverview">
+                      <label
+                        for="carParkingPerSpace "
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Car Parking Per Space
+                      </label>
+                      <input
+                        type="number"
+                        id="carParkingPerSpace "
+                        name="carParkingPerSpace "
+                        class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                        placeholder="01"
+                        required
+                      />
+                    </div>
                   </div>
 
-                  <div class="bedRooms inputCardRentalOverview">
-                    <label
-                      for="bedRooms "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Bed Rooms
-                    </label>
-                    <input
-                      type="number"
-                      id="bedRooms "
-                      name="bedRooms "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalRooms inputCardRentalOverview">
-                    <label
-                      for="totalRooms"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Rooms</label
-                    >
-                    <input
-                      type="number"
-                      id="totalRooms"
-                      name="totalRooms"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-
-                  <div class="floor inputCardRentalOverview">
-                    <label
-                      for="floor"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Floor
-                    </label>
-                    <textarea
-                      type="number"
-                      id="floor"
-                      name="floor"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="availableFrom inputCardRentalOverview">
-                    <label
-                      for="availableFrom"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Available From
-                    </label>
-                    <input
-                      type="date"
-                      id="availableFrom"
-                      name="availableFrom"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      required
-                    />
-                  </div>
-
-                  <div class="priceConditions inputCardRentalOverview">
-                    <label
-                      for="priceConditions"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Price Conditions</label
-                    >
-                    <input
-                      type="number"
-                      id="priceConditions"
-                      name="priceConditions"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="3,000 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="depositBond inputCardRentalOverview">
-                    <label
-                      for="depositBond"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Deposit/Bond
-                    </label>
-                    <input
-                      type="number"
-                      id="depositBond"
-                      name="depositBond"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="2555.00 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="baths inputCardRentalOverview">
-                    <label
-                      for="baths"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Baths
-                    </label>
-                    <input
-                      type="number"
-                      id="baths"
-                      name="baths"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="2555.00 TK"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalArea inputCardRentalOverview">
-                    <label
-                      for="totalArea "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Area (sq. ft)
-                    </label>
-                    <input
-                      type="number"
-                      id="totalArea "
-                      name="totalArea "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="1560"
-                      required
-                    />
-                  </div>
-
-                  <div class="totalFloors inputCardRentalOverview">
-                    <label
-                      for="totalFloors "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Total Floors
-                    </label>
-                    <input
-                      type="number"
-                      id="totalFloors "
-                      name="totalFloors "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="10"
-                      required
-                    />
-                  </div>
-
-                  <div class="carParkingPerSpace inputCardRentalOverview">
-                    <label
-                      for="carParkingPerSpace "
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Car Parking Per Space
-                    </label>
-                    <input
-                      type="number"
-                      id="carParkingPerSpace "
-                      name="carParkingPerSpace "
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="01"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <h2 class="text-xl font-bold underline">Indoor Features</h2>
-                <div class="titleArea flex space-x-10">
-                  <div class="indoorFeatures inputCardIndoorFeatures">
-                    <div class="flex align-middle justify-start space-x-6 my-3">
-                      <div class="communityHall">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="communityHall" class="text-sm"
-                          >Community Hall</label
-                        >
-                      </div>
-                      <div class="safetyGrills">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="safetyGrills" class="text-sm"
-                          >Safety Grills</label
-                        >
-                      </div>
-                      <div class="servantsRoom">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="servantsRoom" class="text-sm"
-                          >Servants Room</label
-                        >
-                      </div>
-                      <div class="servantsToilet">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="servantsToilet" class="text-sm"
-                          >Servants Toilet</label
-                        >
-                      </div>
-                      <div class="fireExit">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="fireExit" class="text-sm">Fire exit</label>
-                      </div>
-                      <div class="CCTV">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="CCTV" class="text-sm">CCTV</label>
-                      </div>
-                      <div class="WASAconnection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="WASAconnection" class="text-sm"
-                          >WASA connection</label
-                        >
-                      </div>
-                      <div class="DESCOconnection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="DESCOconnection" class="text-sm"
-                          >DESCO connection</label
-                        >
-                      </div>
-                      <div class="TITAS-GAS-Connection">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="TITAS-GAS-Connection" class="text-sm"
-                          >TITAS GAS connection</label
-                        >
-                      </div>
-                      <div class="belcony">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="belcony" class="text-sm">Belcony</label>
-                      </div>
-                      <div class="interCom">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="interCom" class="text-sm">Inter Com</label>
+                  <h2 class="text-xl font-bold underline">Indoor Features</h2>
+                  <div class="indoorFeatures flex space-x-10">
+                    <div class="indoorFeatures inputCardIndoorFeatures">
+                      <div
+                        class="flex align-middle justify-start space-x-6 my-3"
+                      >
+                        <div class="communityHall">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="communityHall" class="text-sm"
+                            >Community Hall</label
+                          >
+                        </div>
+                        <div class="safetyGrills">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="safetyGrills" class="text-sm"
+                            >Safety Grills</label
+                          >
+                        </div>
+                        <div class="servantsRoom">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="servantsRoom" class="text-sm"
+                            >Servants Room</label
+                          >
+                        </div>
+                        <div class="servantsToilet">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="servantsToilet" class="text-sm"
+                            >Servants Toilet</label
+                          >
+                        </div>
+                        <div class="fireExit">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="fireExit" class="text-sm"
+                            >Fire exit</label
+                          >
+                        </div>
+                        <div class="CCTV">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="CCTV" class="text-sm">CCTV</label>
+                        </div>
+                        <div class="WASAconnection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="WASAconnection" class="text-sm"
+                            >WASA connection</label
+                          >
+                        </div>
+                        <div class="DESCOconnection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="DESCOconnection" class="text-sm"
+                            >DESCO connection</label
+                          >
+                        </div>
+                        <div class="TITAS-GAS-Connection">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="TITAS-GAS-Connection" class="text-sm"
+                            >TITAS GAS connection</label
+                          >
+                        </div>
+                        <div class="belcony">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="belcony" class="text-sm">Belcony</label>
+                        </div>
+                        <div class="interCom">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="interCom" class="text-sm"
+                            >Inter Com</label
+                          >
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <h2 class="text-xl font-bold underline">Outdoor Features</h2>
-                <div class="titleArea flex space-x-10">
-                  <div class="outdoorFeatures inputCardOutdoorFeatures">
-                    <div class="flex align-middle justify-start space-x-6 my-3">
-                      <div class="southFacing">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="southFacing" class="text-sm"
-                          >South facing</label
-                        >
-                      </div>
-                      <div class="roofTopGarden">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="roofTopGarden" class="text-sm"
-                          >Roof Top Garden</label
-                        >
-                      </div>
-                      <div class="driversQuarters">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="driversQuarters" class="text-sm"
-                          >Drivers quarters</label
-                        >
-                      </div>
-                      <div class="generator">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="generator" class="text-sm">Generator</label>
-                      </div>
-                      <div class="lift">
-                        <input
-                          type="checkbox"
-                          checked="checked"
-                          class="checkbox checkbox-xs"
-                        />
-                        <label for="lift" class="text-sm">Lift</label>
+                  <h2 class="text-xl font-bold underline">Outdoor Features</h2>
+                  <div class="outdoorFeatures flex space-x-10">
+                    <div class="outdoorFeatures inputCardOutdoorFeatures">
+                      <div
+                        class="flex align-middle justify-start space-x-6 my-3"
+                      >
+                        <div class="southFacing">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="southFacing" class="text-sm"
+                            >South facing</label
+                          >
+                        </div>
+                        <div class="roofTopGarden">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="roofTopGarden" class="text-sm"
+                            >Roof Top Garden</label
+                          >
+                        </div>
+                        <div class="driversQuarters">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="driversQuarters" class="text-sm"
+                            >Drivers quarters</label
+                          >
+                        </div>
+                        <div class="generator">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="generator" class="text-sm"
+                            >Generator</label
+                          >
+                        </div>
+                        <div class="lift">
+                          <input
+                            type="checkbox"
+                            checked="checked"
+                            class="checkbox checkbox-xs"
+                          />
+                          <label for="lift" class="text-sm">Lift</label>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
 
-                <h2 class="text-xl font-bold underline">House Images</h2>
-                <div class="tags flex justify-between">
-                  <div class="imageOne imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image One</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageTwo imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Two</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Three</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Four</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Five</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
-                  </div>
-                  <div class="imageThree imageUpload w-[15%]">
-                    <label
-                      for="tags"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Image Six</label
-                    >
-                    <img
-                      class="imgPreview w-38 h-28 mb-5 rounded-lg shadow-xl dark:shadow-gray-800"
-                      src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
-                      alt="image description"
-                    />
-                    <input
-                      type="file"
-                      id="tags"
-                      name="tags"
-                      class="formInput"
-                      placeholder="Example: Part-Time, Full-time, Remote... "
-                      required
-                    />
+                  <h2 class="text-xl font-bold underline">House Images</h2>
+                  <div class="houseImages tags flex justify-between">
+                    <div class="imageOne imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image One</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageTwo imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Two</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Three</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Four</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Five</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
+                    <div class="imageThree imageUpload w-[15%]">
+                      <label
+                        for="tags"
+                        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                        >Image Six</label
+                      >
+                      <img
+                        class="imgPreview imageCard"
+                        id="imagePreviewer"
+                        src="https://flowbite.com/docs/images/examples/image-2@2x.jpg"
+                        alt="image description"
+                      />
+                      <input
+                        type="file"
+                        id="tags"
+                        name="tags"
+                        class="formInput"
+                        placeholder="Example: Part-Time, Full-time, Remote... "
+                        required
+                      />
+                    </div>
                   </div>
                 </div>
               </form>
@@ -2701,30 +2863,50 @@
                   >
                   <div
                     class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                    id="checkBoxForProperty"
                   >
-                    <div class="rent">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="rentCheckBox checkbox checkbox-xs"
+                        id="rent-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="rent" class="text-sm">Rent</label>
+                      <label
+                        for="rent-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Rent</label
+                      >
                     </div>
-                    <div class="sell">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="sellCheckBox checkbox checkbox-xs"
+                        id="sell-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="sell" class="text-sm">Sell</label>
+                      <label
+                        for="sell-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Sell</label
+                      >
                     </div>
-                    <div class="both">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
+                        id="both-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
                         checked="checked"
-                        class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="both" class="text-sm">Both</label>
+                      <label
+                        for="both-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Both</label
+                      >
                     </div>
                   </div>
                 </div>
@@ -2736,23 +2918,34 @@
                     >Property For</label
                   >
                   <div class="flex align-middle space-x-4 mt-3">
-                    <div class="rent">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="checkbox checkbox-xs"
-                        value="detail-view"
+                        id="detail-view-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-two-radio"
+                        checked=""
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="rent" class="text-sm">Detail View</label>
+                      <label
+                        for="detail-view-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Details View</label
+                      >
                     </div>
-                    <div class="sell">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="checkbox checkbox-xs"
-                        value="short-view"
+                        id="short-view-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-two-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="sell" class="text-sm">Short View</label>
+                      <label
+                        for="short-view-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Short View</label
+                      >
                     </div>
                   </div>
                 </div>
@@ -2797,7 +2990,11 @@
           <h3 class="font-bold text-lg mb-4">Edit Categories!</h3>
           <div>
             <div class="flex justify-between space-x-1">
-              <form action="form" id="categoryformID" class="space-y-4 w-full">
+              <form
+                action="form"
+                id="categoryEditFormID"
+                class="space-y-4 w-full"
+              >
                 <div class="categoriesTitle">
                   <label
                     for="categoriesTitle"
@@ -2813,7 +3010,6 @@
                     required
                   />
                 </div>
-
                 <div class="checkBoxes">
                   <label
                     for="checkBoxes"
@@ -2822,33 +3018,54 @@
                   >
                   <div
                     class="checkBoxForProperty flex align-middle space-x-4 mt-3"
+                    id="checkBoxForProperty"
                   >
-                    <div class="rent">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="rentCheckBox checkbox checkbox-xs"
+                        id="rent-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="rent" class="text-sm">Rent</label>
+                      <label
+                        for="rent-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Rent</label
+                      >
                     </div>
-                    <div class="sell">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="sellCheckBox checkbox checkbox-xs"
+                        id="sell-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="sell" class="text-sm">Sell</label>
+                      <label
+                        for="sell-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Sell</label
+                      >
                     </div>
-                    <div class="both">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
+                        id="both-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-one-radio"
                         checked="checked"
-                        class="bothBtnForCheckAll checkAll checkbox checkbox-xs"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="both" class="text-sm">Both</label>
+                      <label
+                        for="both-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Both</label
+                      >
                     </div>
                   </div>
                 </div>
+
                 <div class="view">
                   <label
                     for="view"
@@ -2856,23 +3073,34 @@
                     >Property For</label
                   >
                   <div class="flex align-middle space-x-4 mt-3">
-                    <div class="rent">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="checkbox checkbox-xs"
-                        value="detail-view"
+                        id="detail-view-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-two-radio"
+                        checked=""
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="rent" class="text-sm">Detail View</label>
+                      <label
+                        for="detail-view-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Details View</label
+                      >
                     </div>
-                    <div class="sell">
+                    <div class="flex items-center">
                       <input
-                        type="checkbox"
-                        checked="checked"
-                        class="checkbox checkbox-xs"
-                        value="short-view"
+                        id="short-view-radio"
+                        type="radio"
+                        value=""
+                        name="modal-propery-two-radio"
+                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                       />
-                      <label for="sell" class="text-sm">Short View</label>
+                      <label
+                        for="short-view-radio"
+                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                        >Short View</label
+                      >
                     </div>
                   </div>
                 </div>
@@ -2900,7 +3128,7 @@
     <!-- Notificatin  -->
     <div id="notification"></div>
     <script src="./js/notification.js"></script>
-    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="./js/flowbite.min.js"></script>
 
     <!-- Daterange  -->
     <script src="./node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
