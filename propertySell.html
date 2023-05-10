@@ -220,152 +220,35 @@
                     class="btn text-white bg-gradient-to-r from-green-400 via-green-500 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 shadow-lg shadow-green-500/50 dark:shadow-lg dark:shadow-green-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 border-none"
                     >Add Sell Post</label
                   >
-                  <button
-                    id="dropdownRadioButton"
-                    data-dropdown-toggle="dropdownRadio"
-                    class="inline-flex items-center text-gray-500 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 w-48 mr-2"
-                    type="button"
-                  >
-                    <svg
-                      class="w-4 h-4 mr-2 text-gray-400"
-                      aria-hidden="true"
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg"
+                  <div class="relative w-[13rem]">
+                    <select
+                      name="overViewFilter"
+                      class="formInput overViewFilter py-3 pl-8 mr-2"
                     >
-                      <path
-                        fill-rule="evenodd"
-                        d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
-                        clip-rule="evenodd"
-                      ></path>
-                    </svg>
-                    Last 30 days
-                    <svg
-                      class="w-3 h-3 ml-2"
-                      aria-hidden="true"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                      <option value="last-30-days">Last 30 days</option>
+                      <option value="last-15-days">Last 15 days</option>
+                      <option value="last-10-days">Last 10 days</option>
+                      <option value="last-7-days">Last 7 days</option>
+                      <option value="last-day">Last day</option>
+                    </select>
+                    <ion-icon
+                      name="time-outline"
+                      class="absolute top-3.5 left-2 text-lg"
+                    ></ion-icon>
+                  </div>
+                  <div class="relative w-[13rem]">
+                    <select
+                      name="propertyFilter"
+                      class="formInput propertyFilter py-3 pl-8 mr-2"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M19 9l-7 7-7-7"
-                      ></path>
-                    </svg>
-                  </button>
-                  <!-- Dropdown menu -->
-                  <div
-                    id="dropdownRadio"
-                    class="z-10 hidden w-48 bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-                    data-popper-reference-hidden=""
-                    data-popper-escaped=""
-                    data-popper-placement="top"
-                    style="
-                      position: absolute;
-                      inset: auto auto 0px 0px;
-                      margin: 0px;
-                      transform: translate3d(522.5px, 3847.5px, 0px);
-                    "
-                  >
-                    <ul
-                      class="p-3 space-y-1 text-sm text-gray-700 dark:text-gray-200"
-                      aria-labelledby="dropdownRadioButton"
-                    >
-                      <li>
-                        <div
-                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
-                        >
-                          <input
-                            id="filter-radio-example-1"
-                            type="radio"
-                            value=""
-                            name="filter-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="filter-radio-example-1"
-                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
-                            >Last day</label
-                          >
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
-                        >
-                          <input
-                            checked=""
-                            id="filter-radio-example-2"
-                            type="radio"
-                            value=""
-                            name="filter-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="filter-radio-example-2"
-                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
-                            >Last 7 days</label
-                          >
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
-                        >
-                          <input
-                            id="filter-radio-example-3"
-                            type="radio"
-                            value=""
-                            name="filter-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="filter-radio-example-3"
-                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
-                            >Last 30 days</label
-                          >
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
-                        >
-                          <input
-                            id="filter-radio-example-4"
-                            type="radio"
-                            value=""
-                            name="filter-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="filter-radio-example-4"
-                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
-                            >Last month</label
-                          >
-                        </div>
-                      </li>
-                      <li>
-                        <div
-                          class="flex items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-600"
-                        >
-                          <input
-                            id="filter-radio-example-5"
-                            type="radio"
-                            value=""
-                            name="filter-radio"
-                            class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                          />
-                          <label
-                            for="filter-radio-example-5"
-                            class="w-full ml-2 text-sm font-medium text-gray-900 rounded dark:text-gray-300"
-                            >Last year</label
-                          >
-                        </div>
-                      </li>
-                    </ul>
+                      <option value="both">Both</option>
+                      <option value="sell">Sell</option>
+                      <option value="rent">Rent</option>
+                    </select>
+                    <ion-icon
+                      name="grid-outline"
+                      class="absolute top-3.5 left-2"
+                    ></ion-icon>
                   </div>
                 </div>
                 <label for="table-search" class="sr-only">Search</label>
@@ -865,64 +748,27 @@
             <div class="flex justify-between space-x-1">
               <form action="form" id="formID" class="FORM space-y-4 w-full">
                 <div class="filtering flex align-middle space-x-10">
-                  <!-- <div
-                    class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
                     <label
-                      for="checkBoxForProperty"
+                      for="view"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Property For</label
                     >
-                    <div
-                      class="checkBoxForProperty flex align-middle space-x-4 mt-3"
-                      id="checkBoxForProperty"
-                    >
-                      <div class="flex items-center">
-                        <input
-                          id="rent-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="rent-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Rent</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="sell-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="sell-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Sell</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="both-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          checked="checked"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="both-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Both</label
-                        >
-                      </div>
-                    </div>
-                  </div> -->
 
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <select
+                        name="categoriesForProperty"
+                        class="formInput categoriesForProperty propertyForDropdown"
+                      >
+                        <option value="">--Select Property--</option>
+                        <option value="sell">Sell</option>
+                        <option value="rent">Rent</option>
+                        <option value="both">Both</option>
+                      </select>
+                    </div>
+                  </div>
                   <div
                     class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
@@ -931,41 +777,13 @@
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Category</label
                     >
+
                     <div class="flex align-middle space-x-4 mt-3">
-                      <!-- <div class="flex items-center">
-                        <input
-                          id="detail-view-radio"
-                          type="radio"
-                          value=""
-                          name="propery-two-radio"
-                          checked
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="detail-view-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Details View</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="short-view-radio"
-                          type="radio"
-                          value=""
-                          name="propery-two-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="short-view-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Short View</label
-                        >
-                      </div> -->
                       <select
                         name="categoriesForProperty"
-                        class="formInput categoriesForProperty"
+                        class="formInput categoriesForProperty categoryDropdown"
                       >
-                        <option value="">--Select Company--</option>
+                        <option value="">--Select Category--</option>
                         <option value="Apartment">Apartment</option>
                         <option value="Land">Land</option>
                         <option value="Hostel">Hostel</option>
@@ -978,17 +796,38 @@
                     <label
                       for="view"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
-                      >Property For</label
+                      >View</label
                     >
                     <div class="flex align-middle space-x-4 mt-3">
-                      <input
-                        type="text"
-                        name="rent-month"
-                        class="propertyForDisableInput bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                        placeholder="000.00 Tk per month, subject to change"
-                        disabled
-                        value="Property for"
-                      />
+                      <div class="flex items-center">
+                        <input
+                          id="detail-view-radio"
+                          type="radio"
+                          value=""
+                          name="modal-propery-two-radio"
+                          checked=""
+                          class="detail-view w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="detail-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Details View</label
+                        >
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          id="short-view-radio"
+                          type="radio"
+                          value=""
+                          name="modal-propery-two-radio"
+                          class="short-view w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="short-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Short View</label
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1031,7 +870,9 @@
 
                 <h2 class="text-xl font-bold underline">Price Details</h2>
                 <div class="priceDetail flex space-x-10">
-                  <div class="rent-month inputCardForPriceDetails">
+                  <div
+                    class="rentMonth inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="rent-month"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1042,7 +883,7 @@
                       id="rent-month"
                       name="rent-month"
                       class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Example: 550 (negotiable)"
+                      placeholder="Example: 550.00 TK"
                       required
                     />
 
@@ -1084,7 +925,9 @@
                     </div>
                   </div>
 
-                  <div class="serviceCharge inputCardForPriceDetails">
+                  <div
+                    class="serviceCharge inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="serviceCharge"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1100,7 +943,9 @@
                     />
                   </div>
 
-                  <div class="securityDeposit inputCardForPriceDetails">
+                  <div
+                    class="securityDeposit inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="securityDeposit"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1116,7 +961,9 @@
                     />
                   </div>
 
-                  <div class="flatReleasePolicy inputCardForPriceDetails">
+                  <div
+                    class="flatReleasePolicy inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="flatReleasePolicy"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1130,6 +977,61 @@
                       placeholder="3 months earlier notice required"
                       required
                     />
+                  </div>
+
+                  <div
+                    class="sellPrice bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5 w-[32%] my-3 hidden"
+                  >
+                    <label
+                      for="sellPrice"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Sell Price</label
+                    >
+                    <input
+                      type="text"
+                      id="sellPrice"
+                      name="sellPrice"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 550.00 TK"
+                      required
+                    />
+
+                    <label
+                      for="sellPrice"
+                      class="block my-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Negotiable</label
+                    >
+                    <div class="flex space-x-4">
+                      <div class="yes flex space-x-3 items-center">
+                        <input
+                          id="yes-radio"
+                          type="radio"
+                          value=""
+                          name="sell-negotiale-radio"
+                          checked="checked"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="sellPrice"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >Yes</label
+                        >
+                      </div>
+                      <div class="no flex space-x-3 items-center">
+                        <input
+                          id="no-radio"
+                          type="radio"
+                          value=""
+                          name="sell-negotiale-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="sellPrice"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >No</label
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -1152,56 +1054,6 @@
                     ></textarea>
                   </div>
 
-                  <div class="flatSize inputCardForPropertyDetails">
-                    <label
-                      for="flatSize"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Flat Size</label
-                    >
-                    <input
-                      type="text"
-                      id="flatSize"
-                      name="flatSize"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Example: 3000 Sq Feet."
-                      required
-                    />
-                  </div>
-
-                  <div class="floor inputCardForPropertyDetails">
-                    <label
-                      for="floor"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Floor</label
-                    >
-                    <textarea
-                      type="text"
-                      id="addressAndArea"
-                      name="addressAndArea"
-                      rows="3"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your floor here.."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="roomCategory inputCardForPropertyDetails">
-                    <label
-                      for="roomCategory"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Room Category</label
-                    >
-                    <textarea
-                      type="text"
-                      id="addressAndArea"
-                      name="addressAndArea"
-                      rows="3"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your room category here.."
-                      required
-                    ></textarea>
-                  </div>
-
                   <div class="facilities inputCardForPropertyDetails">
                     <label
                       for="facilities"
@@ -1219,7 +1071,65 @@
                     ></textarea>
                   </div>
 
-                  <div class="additionalFacilities inputCardForPropertyDetails">
+                  <div
+                    class="flatSize inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="flatSize"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Size</label
+                    >
+                    <input
+                      type="text"
+                      id="flatSize"
+                      name="flatSize"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 3000 Sq Feet."
+                      required
+                    />
+                  </div>
+
+                  <div
+                    class="floor inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your floor here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="roomCategory inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="roomCategory"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Room Category</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your room category here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="additionalFacilities inputCardForPropertyDetails sellPropertyDetails"
+                  >
                     <label
                       for="additionalFacilities"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1766,66 +1676,29 @@
           >
           <div>
             <div class="flex justify-between space-x-1">
-              <form action="form" id="formID" class="FORM space-y-4 w-full">
+              <form action="form" id="editFormID" class="FORM space-y-4 w-full">
                 <div class="filtering flex align-middle space-x-10">
-                  <!-- <div
-                    class="checkBoxes bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
+                  <div
+                    class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
                     <label
-                      for="checkBoxForProperty"
+                      for="view"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Property For</label
                     >
-                    <div
-                      class="checkBoxForProperty flex align-middle space-x-4 mt-3"
-                      id="checkBoxForProperty"
-                    >
-                      <div class="flex items-center">
-                        <input
-                          id="rent-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="rent-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Rent</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="sell-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="sell-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Sell</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="both-radio"
-                          type="radio"
-                          value=""
-                          name="propery-one-radio"
-                          checked="checked"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="both-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Both</label
-                        >
-                      </div>
-                    </div>
-                  </div> -->
 
+                    <div class="flex align-middle space-x-4 mt-3">
+                      <select
+                        name="categoriesForProperty"
+                        class="formInput categoriesForProperty propertyForDropdown"
+                      >
+                        <option value="">--Select Property--</option>
+                        <option value="sell">Sell</option>
+                        <option value="rent">Rent</option>
+                        <option value="both">Both</option>
+                      </select>
+                    </div>
+                  </div>
                   <div
                     class="view bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5"
                   >
@@ -1834,41 +1707,13 @@
                       class="block text-sm font-medium text-gray-900 dark:text-white"
                       >Category</label
                     >
+
                     <div class="flex align-middle space-x-4 mt-3">
-                      <!-- <div class="flex items-center">
-                        <input
-                          id="detail-view-radio"
-                          type="radio"
-                          value=""
-                          name="propery-two-radio"
-                          checked
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="detail-view-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Details View</label
-                        >
-                      </div>
-                      <div class="flex items-center">
-                        <input
-                          id="short-view-radio"
-                          type="radio"
-                          value=""
-                          name="propery-two-radio"
-                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                        />
-                        <label
-                          for="short-view-radio"
-                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                          >Short View</label
-                        >
-                      </div> -->
                       <select
                         name="categoriesForProperty"
-                        class="formInput categoriesForProperty"
+                        class="formInput categoriesForProperty categoryDropdown"
                       >
-                        <option value="">--Select Company--</option>
+                        <option value="">--Select Category--</option>
                         <option value="Apartment">Apartment</option>
                         <option value="Land">Land</option>
                         <option value="Hostel">Hostel</option>
@@ -1881,17 +1726,38 @@
                     <label
                       for="view"
                       class="block text-sm font-medium text-gray-900 dark:text-white"
-                      >Property For</label
+                      >View</label
                     >
                     <div class="flex align-middle space-x-4 mt-3">
-                      <input
-                        type="text"
-                        name="rent-month"
-                        class="propertyForDisableInput bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                        placeholder="000.00 Tk per month, subject to change"
-                        disabled
-                        value="Property for"
-                      />
+                      <div class="flex items-center">
+                        <input
+                          id="detail-view-radio"
+                          type="radio"
+                          value=""
+                          name="modal-propery-two-radio"
+                          checked=""
+                          class="detail-view w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="detail-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Details View</label
+                        >
+                      </div>
+                      <div class="flex items-center">
+                        <input
+                          id="short-view-radio"
+                          type="radio"
+                          value=""
+                          name="modal-propery-two-radio"
+                          class="short-view w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="short-view-radio"
+                          class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+                          >Short View</label
+                        >
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1934,7 +1800,9 @@
 
                 <h2 class="text-xl font-bold underline">Price Details</h2>
                 <div class="priceDetail flex space-x-10">
-                  <div class="rent-month inputCardForPriceDetails">
+                  <div
+                    class="rentMonth inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="rent-month"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1945,7 +1813,7 @@
                       id="rent-month"
                       name="rent-month"
                       class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Example: 550 (negotiable)"
+                      placeholder="Example: 550.00 TK"
                       required
                     />
 
@@ -1987,7 +1855,9 @@
                     </div>
                   </div>
 
-                  <div class="serviceCharge inputCardForPriceDetails">
+                  <div
+                    class="serviceCharge inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="serviceCharge"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -2003,7 +1873,9 @@
                     />
                   </div>
 
-                  <div class="securityDeposit inputCardForPriceDetails">
+                  <div
+                    class="securityDeposit inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="securityDeposit"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -2019,7 +1891,9 @@
                     />
                   </div>
 
-                  <div class="flatReleasePolicy inputCardForPriceDetails">
+                  <div
+                    class="flatReleasePolicy inputCardForPriceDetails sellPriceDetails"
+                  >
                     <label
                       for="flatReleasePolicy"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -2033,6 +1907,61 @@
                       placeholder="3 months earlier notice required"
                       required
                     />
+                  </div>
+
+                  <div
+                    class="sellPrice bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5 w-[32%] my-3 hidden"
+                  >
+                    <label
+                      for="sellPrice"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Sell Price</label
+                    >
+                    <input
+                      type="text"
+                      id="sellPrice"
+                      name="sellPrice"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 550.00 TK"
+                      required
+                    />
+
+                    <label
+                      for="sellPrice"
+                      class="block my-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Negotiable</label
+                    >
+                    <div class="flex space-x-4">
+                      <div class="yes flex space-x-3 items-center">
+                        <input
+                          id="yes-radio"
+                          type="radio"
+                          value=""
+                          name="sell-negotiale-radio"
+                          checked="checked"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="sellPrice"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >Yes</label
+                        >
+                      </div>
+                      <div class="no flex space-x-3 items-center">
+                        <input
+                          id="no-radio"
+                          type="radio"
+                          value=""
+                          name="sell-negotiale-radio"
+                          class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                        />
+                        <label
+                          for="sellPrice"
+                          class="block text-sm font-medium text-gray-900 dark:text-white"
+                          >No</label
+                        >
+                      </div>
+                    </div>
                   </div>
                 </div>
 
@@ -2055,56 +1984,6 @@
                     ></textarea>
                   </div>
 
-                  <div class="flatSize inputCardForPropertyDetails">
-                    <label
-                      for="flatSize"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Flat Size</label
-                    >
-                    <input
-                      type="text"
-                      id="flatSize"
-                      name="flatSize"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Example: 3000 Sq Feet."
-                      required
-                    />
-                  </div>
-
-                  <div class="floor inputCardForPropertyDetails">
-                    <label
-                      for="floor"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Floor</label
-                    >
-                    <textarea
-                      type="text"
-                      id="addressAndArea"
-                      name="addressAndArea"
-                      rows="3"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your floor here.."
-                      required
-                    ></textarea>
-                  </div>
-
-                  <div class="roomCategory inputCardForPropertyDetails">
-                    <label
-                      for="roomCategory"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Room Category</label
-                    >
-                    <textarea
-                      type="text"
-                      id="addressAndArea"
-                      name="addressAndArea"
-                      rows="3"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="Put your room category here.."
-                      required
-                    ></textarea>
-                  </div>
-
                   <div class="facilities inputCardForPropertyDetails">
                     <label
                       for="facilities"
@@ -2122,7 +2001,65 @@
                     ></textarea>
                   </div>
 
-                  <div class="additionalFacilities inputCardForPropertyDetails">
+                  <div
+                    class="flatSize inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="flatSize"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Size</label
+                    >
+                    <input
+                      type="text"
+                      id="flatSize"
+                      name="flatSize"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Example: 3000 Sq Feet."
+                      required
+                    />
+                  </div>
+
+                  <div
+                    class="floor inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="floor"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Floor</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your floor here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="roomCategory inputCardForPropertyDetails sellPropertyDetails"
+                  >
+                    <label
+                      for="roomCategory"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Room Category</label
+                    >
+                    <textarea
+                      type="text"
+                      id="addressAndArea"
+                      name="addressAndArea"
+                      rows="3"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="Put your room category here.."
+                      required
+                    ></textarea>
+                  </div>
+
+                  <div
+                    class="additionalFacilities inputCardForPropertyDetails sellPropertyDetails"
+                  >
                     <label
                       for="additionalFacilities"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -2910,45 +2847,6 @@
                     </div>
                   </div>
                 </div>
-
-                <div class="view">
-                  <label
-                    for="view"
-                    class="block text-sm font-medium text-gray-900 dark:text-white"
-                    >Property For</label
-                  >
-                  <div class="flex align-middle space-x-4 mt-3">
-                    <div class="flex items-center">
-                      <input
-                        id="detail-view-radio"
-                        type="radio"
-                        value=""
-                        name="modal-propery-two-radio"
-                        checked=""
-                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                      <label
-                        for="detail-view-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >Details View</label
-                      >
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="short-view-radio"
-                        type="radio"
-                        value=""
-                        name="modal-propery-two-radio"
-                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                      <label
-                        for="short-view-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >Short View</label
-                      >
-                    </div>
-                  </div>
-                </div>
               </form>
             </div>
           </div>
@@ -3061,45 +2959,6 @@
                         for="both-radio"
                         class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
                         >Both</label
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="view">
-                  <label
-                    for="view"
-                    class="block text-sm font-medium text-gray-900 dark:text-white"
-                    >Property For</label
-                  >
-                  <div class="flex align-middle space-x-4 mt-3">
-                    <div class="flex items-center">
-                      <input
-                        id="detail-view-radio"
-                        type="radio"
-                        value=""
-                        name="modal-propery-two-radio"
-                        checked=""
-                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                      <label
-                        for="detail-view-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >Details View</label
-                      >
-                    </div>
-                    <div class="flex items-center">
-                      <input
-                        id="short-view-radio"
-                        type="radio"
-                        value=""
-                        name="modal-propery-two-radio"
-                        class="w-4 h-4 text-green-600 bg-gray-100 border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                      />
-                      <label
-                        for="short-view-radio"
-                        class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                        >Short View</label
                       >
                     </div>
                   </div>
