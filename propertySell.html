@@ -1817,7 +1817,7 @@
                 <h2 class="text-xl font-bold underline">Price Details</h2>
                 <div class="priceDetail flex space-x-10">
                   <div
-                    class="rentMonth inputCardForPriceDetails sellPriceDetails"
+                    class="rentMonth inputCardForPriceDetails sellPriceDetails hideForSell"
                   >
                     <label
                       for="rent-month"
@@ -1872,7 +1872,7 @@
                   </div>
 
                   <div
-                    class="serviceCharge inputCardForPriceDetails sellPriceDetails"
+                    class="serviceCharge inputCardForPriceDetails sellPriceDetails hideForSell"
                   >
                     <label
                       for="serviceCharge"
@@ -1890,7 +1890,7 @@
                   </div>
 
                   <div
-                    class="securityDeposit inputCardForPriceDetails sellPriceDetails"
+                    class="securityDeposit inputCardForPriceDetails sellPriceDetails hideForSell"
                   >
                     <label
                       for="securityDeposit"
@@ -1907,27 +1907,7 @@
                     />
                   </div>
 
-                  <div
-                    class="flatReleasePolicy inputCardForPriceDetails sellPriceDetails"
-                  >
-                    <label
-                      for="flatReleasePolicy"
-                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                      >Flat Release Policy</label
-                    >
-                    <input
-                      type="text"
-                      id="rent-month"
-                      name="rent-month"
-                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
-                      placeholder="3 months earlier notice required"
-                      required
-                    />
-                  </div>
-
-                  <div
-                    class="sellPrice bg-gray-200 dark:bg-gray-700 rounded-lg p-2.5 w-[32%] my-3 hidden"
-                  >
+                  <div class="sellPrice hidden showForSell">
                     <label
                       for="sellPrice"
                       class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -1978,6 +1958,42 @@
                         >
                       </div>
                     </div>
+                  </div>
+
+                  <div
+                    class="initialDeposit sellPriceDetails hidden showForSell"
+                  >
+                    <label
+                      for="initialDeposit"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Initial Deposit</label
+                    >
+                    <input
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 month’s rent"
+                      required
+                    />
+                  </div>
+
+                  <div
+                    class="flatReleasePolicy inputCardForPriceDetails sellPriceDetails"
+                  >
+                    <label
+                      for="flatReleasePolicy"
+                      class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                      >Flat Release Policy</label
+                    >
+                    <textarea
+                      rows="3"
+                      type="text"
+                      id="rent-month"
+                      name="rent-month"
+                      class="formInput bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-green-500 dark:focus:border-green-500"
+                      placeholder="3 months earlier notice required"
+                    ></textarea>
                   </div>
                 </div>
 
@@ -3003,10 +3019,10 @@
     <!-- Notificatin  -->
     <div id="notification"></div>
     <script src="./js/notification.js"></script>
-    <script src="./js/flowbite.min.js"></script>
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
 
     <!-- Daterange  -->
-    <script src="./js/datepicker.js"></script>
+    <script src="./node_modules/flowbite-datepicker/dist/js/datepicker.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
     <!-- Iconic  -->
