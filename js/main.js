@@ -132,6 +132,30 @@ document.addEventListener('DOMContentLoaded', function(){
           break;
       }
 
+      let hideForSell = eachGetParent.querySelectorAll('.hideForSell')
+      let showForSell = eachGetParent.querySelectorAll('.showForSell')
+      let flatReleasePolicy  = eachGetParent.querySelector('.flatReleasePolicy ')
+      switch (propertyForDropdown.value) {
+        case 'sell':
+          hideForSell.forEach(eachHideForSell => {
+            eachHideForSell.setAttribute('style', 'display:none !important;')
+          });
+          showForSell.forEach(eachShowForSell => {
+            eachShowForSell.setAttribute('style', 'display:inline-block ;')
+          });
+          flatReleasePolicy.setAttribute('style', 'width: 32% !important;')
+          break;
+          
+          default:
+            hideForSell.forEach(eachHideForSell => {
+              eachHideForSell.removeAttribute('style', 'display:none !important;')
+            });
+            showForSell.forEach(eachShowForSell => {
+              eachShowForSell.removeAttribute('style', 'display:inline-block;')
+            });
+          break;
+      }
+
     })
   })
 })
